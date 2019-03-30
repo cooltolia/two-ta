@@ -1,0 +1,36 @@
+mixin side-menu()
+    +b.NAV.side-menu#side-menu
+        +e.close 
+            +e.close-icon X
+        +e.lists
+            ul.firstNav.active
+                li
+                    a.link1(href="#") Каталог
+                    ul.secondNav
+                        li
+                            a.back1 Назад
+                        li
+                            a.link2(href="#") Женские сумки
+                            ul.thirdNav
+                                li
+                                    a.back2 Назад
+                                li  Женские сумки
+                                li
+                                    a(href='#') Клатчи
+                                li 
+                                    a(href='#') Ручные сумки
+                                li 
+                                    a(href='#') Рюкзаки
+                                li 
+                                    a(href='#') Сумки через плечо
+                        li
+                            a(href="#") Обувь
+                        li
+                            a(href="#") Всякое
+                li
+                    a(href="#") Херня
+                li
+                    a(href="#") Еще одна
+            ul.actions
+                li.tel +7 (812) 748-24-46
+                li Вход

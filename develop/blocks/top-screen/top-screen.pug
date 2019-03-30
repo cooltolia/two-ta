@@ -1,0 +1,16 @@
+mixin top-screen(id)
+    +b.SECTION.top-screen(id=id)
+        +e.m-bg
+            +e.header
+                +main-header()
+            +inner
+                +e.H1.title Временная регистрация в Санкт-Петербруге и области от 1 дня
+                +e.H2.subtitle Легальная помощь через МВД РФ
+        +inner
+            +e.row
+                +e.col
+                    +e.triggers
+                        +top-triggers
+                +e.col
+                    +e.feedback
+                        +top-form

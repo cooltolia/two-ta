@@ -1,0 +1,36 @@
+.main-header {
+    font-family: $opsans;
+    line-height: normal;
+}
+
+
+.main-header__inner {
+    padding: 15px;
+    height: 50px;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__logo {
+    width: 87px;
+    height: 17px;
+
+    img {
+        @include img;
+    }
+}
+
+.main-header__side-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // transform: translateX(100%)
+}
+
+.main-header__hamburger {
+    position: relative;
+}
