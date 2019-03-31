@@ -1,36 +1,39 @@
 mixin side-menu()
-    +b.NAV.side-menu#side-menu
+    +b.NAV.side-menu
         +e.close 
-            +e.close-icon X
-        +e.lists
-            ul.firstNav.active
-                li
-                    a.link1(href="#") Каталог
-                    ul.secondNav
-                        li
-                            a.back1 Назад
-                        li
-                            a.link2(href="#") Женские сумки
-                            ul.thirdNav
-                                li
-                                    a.back2 Назад
-                                li  Женские сумки
-                                li
-                                    a(href='#') Клатчи
-                                li 
-                                    a(href='#') Ручные сумки
-                                li 
-                                    a(href='#') Рюкзаки
-                                li 
-                                    a(href='#') Сумки через плечо
-                        li
-                            a(href="#") Обувь
-                        li
-                            a(href="#") Всякое
-                li
-                    a(href="#") Херня
-                li
-                    a(href="#") Еще одна
-            ul.actions
-                li.tel +7 (812) 748-24-46
-                li Вход
+            +e.close-icon
+        +e.navigation
+            +e.UL.top-menu.active
+                each item in sideMenu
+                    +e.LI.top-menu-item
+                        if (item.innerMenu)
+                            +e.A.top-menu-link.has-subnav(href=item.link)= item.label
+                            +e.UL.second-menu
+                                +e.LI.back(aria-hidden='true') Назад
+                                each subitem in item.innerMenu
+                                    +e.LI.second-menu-item
+                                        if (subitem.innerMenu)
+                                            +e.A.second-menu-link.has-subnav(href=subitem.link)= subitem.label
+                                            +e.UL.third-menu
+                                                +e.LI.back(aria-hidden='true') Назад
+                                                +e.LI.item-title(aria-hidden='true')= subitem.label
+                                                each subsubitem in subitem.innerMenu
+                                                    +e.LI.third-menu-item
+                                                        +e.A.third-menu-link(href=subsubitem.link)= subsubitem.label
+                                        else 
+                                            +e.A.second-menu-link(href=subitem.link)= subitem.label
+                        else
+                            +e.A.top-menu-link(href=item.link)= item.label
+                                            
+            +e.UL.actions
+                +e.LI.action
+                    +e.A.phone(href='tel:+78127482446') +7 (812) 748-24-46
+                +e.LI.action
+                    +e.BUTTON.search(type='button') Поиск
+                +e.LI.action
+                    +e.BUTTON.favorite(type='button') Избранное
+                +e.LI.action
+                    +e.BUTTON.cart(type='button') Корзина
+                    
+                
+                

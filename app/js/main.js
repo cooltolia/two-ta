@@ -3,50 +3,6 @@ $.noConflict();
 jQuery(document).ready(function ($) {
     $("body").removeClass("pageload");
 
-     ;(function () {
-
-     
-
-         if (window.matchMedia("(max-width: 767px)").matches) {
-
-             var $hamburger = $(".hamburger");
-
-             var $nav = $('.main-header__navigation');
-
-             var $links = $('.main-nav a:not(".hasSubnav")');
-
-             
-
-             $hamburger.click(function () {
-
-                 $(this).toggleClass('active');
-
-                 $nav.toggleClass('active')
-
-                 $('body').toggleClass('menu-opened')
-
-             });
-
-     
-
-             $links.on('click', function () {
-
-                 $hamburger.removeClass('active');
-
-                 $nav.removeClass('active');
-
-                 $('body').removeClass('menu-opened');
-
-             })
-
-         }
-
-     
-
-     
-
-     })();
-
      
 
      
@@ -239,83 +195,93 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     ;
+     (function() {
 
-     (function () {
+         if (window.matchMedia('(max-width: 767px)').matches) {
 
-         var first = $('.firstNav');
+             var $hamburger = $('.hamburger');
 
-         var second = $('.secondNav');
+             var $nav = $('.main-header__side-menu');
 
-         var third = $('.thirdNav');
-
-         var actions = $('.actions');
-
-         var back1 = $('.back1');
-
-         var back2 = $('.back2');
+             var $closeMenu = $('.side-menu__close');
 
      
 
-         var height = first.outerHeight() + 30;
+             $deepLinks = $('.side-menu .has-subnav');
 
-         actions.css('top', height + 'px');
-
-     
-
-         $('.side-menu .link1').on('click', function () {
-
-             first.removeClass('active')
-
-             second.addClass('active')
-
-             var height = second.outerHeight() + 30;
-
-             actions.css('top', height + 'px')
-
-         })
+             $backLinks = $('.side-menu__back');
 
      
 
-         $('.side-menu .link2').on('click', function () {
+             $hamburger.on('click', function() {
 
-             second.removeClass('active')
+                 $nav.addClass('active');
 
-             third.addClass('active')
+                 $('body').addClass('menu-opened');
 
-             var height = third.outerHeight() + 30;
-
-             actions.css('top', height + 'px')
-
-         })
+             });
 
      
 
-         back1.on('click', function () {
+             $closeMenu.on('click', function() {
 
-             second.removeClass('active')
+                 $nav.removeClass('active');
 
-             first.addClass('active')
+                 $('body').removeClass('menu-opened');
 
-             var height = first.outerHeight() + 30;
+             });
 
-             actions.css('top', height + 'px')
+     
 
-         })
+             $deepLinks.on('click', function(e) {
 
-         back2.on('click', function () {
+                 e.preventDefault();
 
-             third.removeClass('active')
+     
 
-             second.addClass('active')
+                 var $this = $(this);
 
-             var height = second.outerHeight() + 30;
+     
 
-             actions.css('top', height + 'px')
+                 var currentMenu = $this.parents('ul');
 
-         })
+                 var nextMenu = $this.next();
+
+                 currentMenu.removeClass('active');
+
+                 nextMenu.addClass('active');
+
+             });
+
+     
+
+             $backLinks.on('click', function(e) {
+
+                 e.preventDefault();
+
+     
+
+                 var $this = $(this);
+
+     
+
+                 var currentMenu = $this.parents('ul');
+
+                 var previousMenu = currentMenu.parents('ul');
+
+     
+
+                 $(currentMenu[0]).removeClass('active');
+
+                 $(previousMenu[0]).addClass('active');
+
+             });
+
+         }
 
      })();
+
+     
 
      
      

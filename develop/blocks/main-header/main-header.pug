@@ -1,8 +1,18 @@
 mixin main-header
     +b.HEADER.main-header
         +e.inner
+            +e.main-nav
+                +main-nav
             +e.logo
-                img(src="images/logo_m.png", alt="")
+                picture
+                    source(srcset="images/logo.png" media="(min-width: 768px)")
+                    img(src="images/logo_m.png" alt="TWO-TA логотип")
+            +e.A.phone +7 (812) 748-24-46
+            +e.A.login(href='#loginModal' data-target='#loginModal' data-toggle='modal') Вход
+            +e.actions
+                +e.BUTTON.action.--search(type='button') Поиск
+                +e.BUTTON.action.--favorite(type='button') Избранное
+                +e.BUTTON.action.--cart(type='button') Корзина
             +e.hamburger
                 +hamburger
             +e.side-menu

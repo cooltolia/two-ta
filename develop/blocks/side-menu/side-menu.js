@@ -1,39 +1,43 @@
-;
-(function () {
-    var first = $('.firstNav');
-    var second = $('.secondNav');
-    var third = $('.thirdNav');
-    var actions = $('.actions');
-    var back1 = $('.back1');
-    var back2 = $('.back2');
+(function() {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        var $hamburger = $('.hamburger');
+        var $nav = $('.main-header__side-menu');
+        var $closeMenu = $('.side-menu__close');
 
-    var height = first.outerHeight() + 30;
-    actions.css('top', height + 'px');
+        $deepLinks = $('.side-menu .has-subnav');
+        $backLinks = $('.side-menu__back');
 
-    $('.side-menu .link1').on('click', function () {
-        first.removeClass('active')
-        second.addClass('active')
-        var height = second.outerHeight() + 30;
-        actions.css('top', height + 'px')
-    })
+        $hamburger.on('click', function() {
+            $nav.addClass('active');
+            $('body').addClass('menu-opened');
+        });
 
-    $('.side-menu .link2').on('click', function () {
-        second.removeClass('active')
-        third.addClass('active')
-        var height = third.outerHeight() + 30;
-        actions.css('top', height + 'px')
-    })
+        $closeMenu.on('click', function() {
+            $nav.removeClass('active');
+            $('body').removeClass('menu-opened');
+        });
 
-    back1.on('click', function () {
-        second.removeClass('active')
-        first.addClass('active')
-        var height = first.outerHeight() + 30;
-        actions.css('top', height + 'px')
-    })
-    back2.on('click', function () {
-        third.removeClass('active')
-        second.addClass('active')
-        var height = second.outerHeight() + 30;
-        actions.css('top', height + 'px')
-    })
+        $deepLinks.on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+
+            var currentMenu = $this.parents('ul');
+            var nextMenu = $this.next();
+            currentMenu.removeClass('active');
+            nextMenu.addClass('active');
+        });
+
+        $backLinks.on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+
+            var currentMenu = $this.parents('ul');
+            var previousMenu = currentMenu.parents('ul');
+
+            $(currentMenu[0]).removeClass('active');
+            $(previousMenu[0]).addClass('active');
+        });
+    }
 })();

@@ -1,0 +1,169 @@
+{
+    "sideMenu": [
+        {
+            "label": "Каталог",
+            "link": "/catalog",
+            "innerMenu": [
+                {
+                    "label": "Женские сумки",
+                    "link": "/catalog/",
+                    "innerMenu": [
+                        {
+                            "label": "Клатчи",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Ручные сумки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Рюкзаки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Сумки через плечо",
+                            "link": "/catalog/"
+                        }
+                    ]
+                },
+                {
+                    "label": "Мужские сумки",
+                    "link": "/catalog/",
+                    "innerMenu": [
+                        {
+                            "label": "Ручные сумки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Рюкзаки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Сумки через плечо",
+                            "link": "/catalog/"
+                        }
+                    ]
+                },
+                {
+                    "label": "Аксессуары",
+                    "link": "/catalog/",
+                    "innerMenu": [
+                        {
+                            "label": "Ремни",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Браслеты",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Кошельки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Футляры",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Блокноты",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Ключницы",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Косметички",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Для Гаджетов",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Для Документов",
+                            "link": "/catalog/"
+                        }
+                    ]
+                },
+                {
+                    "label": "Рюкзаки",
+                    "link": "/catalog/",
+                    "innerMenu": [
+                        {
+                            "label": "Женские рюкзаки",
+                            "link": "/catalog/"
+                        },
+                        {
+                            "label": "Мужские рюкзаки",
+                            "link": "/catalog/"
+                        }
+                    ]
+                },
+                {
+                    "label": "Женская обувь",
+                    "link": "/catalog/",
+                    "innerMenu": [
+                        {
+                            "label": "Коллекция Весна-Лето",
+                            "link": "/catalog/"
+                        }
+                    ]
+                },
+                {
+                    "label": "косметика для ухода",
+                    "link": "/catalog/"
+                },
+                {
+                    "label": "Подарочная карта",
+                    "link": "/catalog/"
+                }
+            ]
+        },
+        {
+            "label": "О нас",
+            "link": "/about"
+        },
+        {
+            "label": "Условия",
+            "link": "/terms",
+            "modifier": "small",
+            "innerMenu": [
+                {
+                    "label": "Гарантии",
+                    "link": "/terms"
+                },
+                {
+                    "label": "Оплата",
+                    "link": "/terms"
+                },
+                {
+                    "label": "Доставка",
+                    "link": "/terms"
+                },
+                {
+                    "label": "Владельцам карт",
+                    "link": "/terms"
+                },
+                {
+                    "label": "Корпоративным клиентам",
+                    "link": "/terms"
+                },
+                {
+                    "label": "Дополнительные услуги",
+                    "link": "/terms"
+                }
+            ]
+        },
+        {
+            "label": "Контакты",
+            "link": "/contacts"
+        },
+        {
+            "label": "Eng",
+            "link": "/en"
+        }
+        
+    ]
+}
+
