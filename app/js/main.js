@@ -203,13 +203,25 @@ jQuery(document).ready(function ($) {
 
              var $nav = $('.main-header__side-menu');
 
+             var $actions = $('.side-menu__actions');
+
              var $closeMenu = $('.side-menu__close');
 
      
 
-             $deepLinks = $('.side-menu .has-subnav');
+             var $deepLinks = $('.side-menu .has-subnav');
 
-             $backLinks = $('.side-menu__back');
+             var $backLinks = $('.side-menu__back');
+
+     
+
+             var $currentMenu = $('.side-menu__top-menu');
+
+             var height = $currentMenu.outerHeight() + 30;
+
+             
+
+             $actions.css('top', height + 'px');
 
      
 
@@ -247,6 +259,14 @@ jQuery(document).ready(function ($) {
 
                  var nextMenu = $this.next();
 
+     
+
+                 var height = nextMenu.outerHeight() + 30;
+
+                 $actions.css('top', height + 'px');
+
+     
+
                  currentMenu.removeClass('active');
 
                  nextMenu.addClass('active');
@@ -268,6 +288,12 @@ jQuery(document).ready(function ($) {
                  var currentMenu = $this.parents('ul');
 
                  var previousMenu = currentMenu.parents('ul');
+
+     
+
+                 var height = $(previousMenu[0]).outerHeight() + 30;
+
+                 $actions.css('top', height + 'px');
 
      
 

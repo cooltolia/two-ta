@@ -103,3 +103,10 @@
 .main-header__hamburger {
     position: relative;
 }
+
+@media #{$tablet} {
+    .main-header__main-nav {
+        display: block;
+        margin-right: 15px;
+    }
+}

@@ -1,5 +1,5 @@
 {
-	"sideMenu": [
+	"main-nav": [
 		{
 			"label": "Каталог",
 			"link": "/catalog",
@@ -164,7 +164,7 @@
 			"link": "/en"
 		}
 	],
-	"main-nav": [
+	"sideMenu": [
 		{
 			"label": "Каталог",
 			"link": "/catalog",
