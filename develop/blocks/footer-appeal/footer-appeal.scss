@@ -1,0 +1,54 @@
+.footer-appeal {
+    font-family: $opsans;
+}
+
+.footer-appeal__title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.footer-appeal__input {
+    width: 100%;
+    padding: 7px 15px;
+    margin-bottom: 10px;
+
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+
+    border: 1px solid #cccccc;
+
+    &::placeholder {
+        color: #999999;
+        letter-spacing: 0.35px;
+    }
+}
+
+.footer-appeal__submit {
+    @include btn-theme(#000);
+    width: 100%;
+    padding: 6px 20px;
+    margin-bottom: 15px;
+}
+
+.footer-appeal__legal {
+    color: $text-color-l;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+
+    a {
+        color: $text-color-l;
+        text-decoration: underline;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $text-color;
+        }
+    }
+}

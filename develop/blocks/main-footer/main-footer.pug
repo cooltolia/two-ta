@@ -1,9 +1,14 @@
 mixin main-footer(id)
     +b.FOOTER.main-footer(id=id)
-        +inner
+        +e.inner
             +e.row
                 +e.col
                     +e.info
+                        +e.A.info-item(href='tel:+78127482446') +7 (812) 748-24-46
+                        +e.A.info-item(href='mailto: hello@two-ta.ru') hello@two-ta.ru
+                        +e.info-item Санкт-Петербург, <br> ул. Радищева, 17-19
+                    +e.socials
+                        +socials
                 +e.col
                     +footer-nav
                 +e.col
@@ -11,8 +16,8 @@ mixin main-footer(id)
             +e.row
                 +e.legal
                     +e.legal-text
-                        | 2015-2018 © Two-ta leather works. 
-                    +e.legal-text
+                        | 2015-2019 © Two-ta leather works. <br>
                         | Использование материалов сайта без ссылки как минимум некрасиво =)
-                    +e.A.legal-link(href='/policy') Политика конфиденциальности
-                    +e.A.legal-link(href='#') Публичная оферта
+                    +e.legal-links
+                        +e.A.legal-link(href='/policy') Политика конфиденциальности
+                        +e.A.legal-link(href='#') Публичная оферта
