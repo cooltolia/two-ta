@@ -9,9 +9,97 @@ jQuery(document).ready(function ($) {
      
 
      
+     (function() {
+
+         $slider = $('.instagram-preview__list');
+
+     
+
+         $slider.slick({
+
+             speed: 500,
+
+             arrows: false,
+
+             dots: true,
+
+             infinite: true,
+
+             slidesPerRow: 1,
+
+             slidesToShow: 1,
+
+             slidesToScroll: 1,
+
+             swipe: true,
+
+             mobileFirst: true,
+
+             // autoplay: true,
+
+             // autoplaySpeed: 3000,
+
+             responsive: [
+
+                 {
+
+                     breakpoint: 768,
+
+                     settings: 'unslick'
+
+                 }
+
+             ]
+
+         });
+
+     })();
+
      
 
      
+     
+
+     
+     
+
+     
+     (function() {
+
+         var $topLinks = $('.main-nav__top-menu-link.has-subnav');
+
+     
+
+         // $topLinks.hover(
+
+         //     function() {
+
+         //         var $this = $(this);
+
+         //         console.log($this);
+
+         //         var $submenu = $this.next();
+
+         //         $submenu.addClass('active');
+
+         //     },
+
+         //     function() {
+
+         //         var $this = $(this);
+
+         //         console.log($this);
+
+         //         var $submenu = $this.next();
+
+         //         $submenu.removeClass('active');
+
+         //     }
+
+         // );
+
+     })();
+
      
 
      
@@ -197,7 +285,7 @@ jQuery(document).ready(function ($) {
      
      (function() {
 
-         if (window.matchMedia('(max-width: 767px)').matches) {
+         if (window.matchMedia('(max-width: 768px)').matches) {
 
              var $hamburger = $('.hamburger');
 

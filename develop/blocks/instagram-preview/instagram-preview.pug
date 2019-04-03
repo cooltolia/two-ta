@@ -1,0 +1,10 @@
+mixin instagram-preview()
+    +b.SECTION.instagram-preview
+        +e.HEADER.header
+            +e.A.link(href='https://www.instagram.com/twota/?hl=ru') @two-ta
+            +e.H2.title Подписывайтесь<br> на наш Instagram
+        +e.list
+            each item in instagramPreview
+                +e.A.item(href='https://www.instagram.com/twota/?hl=ru' style='background-image: url(' + item.image + ')')
+                    +e.likes
+                        +e.SPAN.likes-value= item.likes

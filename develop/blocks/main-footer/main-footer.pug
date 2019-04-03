@@ -1,15 +1,18 @@
 mixin main-footer(id)
     +b.FOOTER.main-footer(id=id)
         +inner
-            +inner
             +e.row
-                +e.logo
-                    img(src='images/logo.svg' alt='Пропискин')
-                +e.phone
-                    +e.phone-appeal Есть вопросы? Звоните!
-                    +e.phone-number(href='#modal3' data-toggle="modal" data-target="#modal3") +7 (911) 123-45-67
-                    +e.A.phone-number.--mobile(href='tel:+79111234567') +7 (911) 123-45-67
-                    +e.phone-time Круглосуточно, 24/7 
-                +e.P.legal
-                    | Временная регистрация 2019 &copy;<br>
-                    | Пропискин. Все права защищены.
+                +e.col
+                    +e.info
+                +e.col
+                    +footer-nav
+                +e.col
+                    +footer-appeal
+            +e.row
+                +e.legal
+                    +e.legal-text
+                        | 2015-2018 © Two-ta leather works. 
+                    +e.legal-text
+                        | Использование материалов сайта без ссылки как минимум некрасиво =)
+                    +e.A.legal-link(href='/policy') Политика конфиденциальности
+                    +e.A.legal-link(href='#') Публичная оферта

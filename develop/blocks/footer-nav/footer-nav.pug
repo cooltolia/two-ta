@@ -1,0 +1,11 @@
+mixin footer-nav()
+    +b.NAV.footer-nav
+        each col in footerNav
+            +e.col
+                +e.title= col.title
+                +e.UL.list
+                    each item in col.list
+                        +e.LI.item
+                            +e.A.link(href=item.link)= item.label 
+
+

@@ -1,0 +1,44 @@
+{
+    "instagramPreview": [
+        {
+            "image": "images/instagram-preview/slide1.jpg",
+            "likes": 12900
+        },
+        {
+            "image": "images/instagram-preview/slide2.jpg",
+            "likes": 84433
+        },
+        {
+            "image": "images/instagram-preview/slide3.jpg",
+            "likes": 21311
+        },
+        {
+            "image": "images/instagram-preview/slide4.jpg",
+            "likes": 55343
+        },
+        {
+            "image": "images/instagram-preview/slide5.jpg",
+            "likes": 1
+        },
+        {
+            "image": "images/instagram-preview/slide6.jpg",
+            "likes": 60062
+        },
+        {
+            "image": "images/instagram-preview/slide7.jpg",
+            "likes": 888
+        },
+        {
+            "image": "images/instagram-preview/slide8.jpg",
+            "likes": 1323
+        },
+        {
+            "image": "images/instagram-preview/slide9.jpg",
+            "likes": 2377
+        },
+        {
+            "image": "images/instagram-preview/slide10.jpg",
+            "likes": 12900
+        }
+    ]
+}

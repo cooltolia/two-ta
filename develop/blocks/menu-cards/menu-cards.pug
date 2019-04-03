@@ -1,0 +1,58 @@
+mixin menu-cards()
+    +b.SECTION.menu-cards
+        +e.A.card.--heigh(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card1.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card1_s.jpg" alt="Женские сумки")
+            +e.content
+                +e.title Женские сумки
+                +e.subtitle Новая коллекция
+        +e.A.card(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card2.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card2_s.jpg" alt="Женская обувь")
+            +e.content
+                +e.title Женская обувь
+                +e.subtitle Новая коллекция
+        +e.A.card(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card3.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card3_s.jpg" alt="Аксессуары")
+            +e.content
+                +e.title Аксессуары
+                +e.subtitle Стиль в мелочах
+        +e.A.card.--heigh.--shift(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card4.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card4_s.jpg" alt="Мужские сумки")
+            +e.content.--bottom
+                +e.title Мужские сумки
+                +e.subtitle Новая коллекция
+        +e.A.card.--full(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card5.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card5_s.jpg" alt="Рюкзаки")
+            +e.content
+                +e.title Рюкзаки
+                +e.subtitle Удобно и стильно
+        +e.A.card(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card6.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card6_s.jpg" alt="Косметика для ухода")
+            +e.content.--bottom
+                +e.title Косметика для&nbsp;ухода
+                +e.subtitle Всегда с иголочки
+        +e.A.card(href='/catalog')
+            +e.image
+                picture
+                    source(srcset="images/menu-cards/menu-card7.jpg" media="(min-width: 769px)")
+                    img(src="images/menu-cards/menu-card7_s.jpg" alt="Подарочная карта")
+            +e.content.--bottom
+                +e.title Подарочная карта
+                +e.subtitle Порадуйте близких

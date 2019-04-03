@@ -1,5 +1,5 @@
 {
-    "main-nav": [
+    "mainNav": [
         {
             "label": "Каталог",
             "link": "/catalog",
@@ -103,6 +103,7 @@
                 {
                     "label": "Женская обувь",
                     "link": "/catalog/",
+                    "modifier": "shift",
                     "innerMenu": [
                         {
                             "label": "Коллекция Весна-Лето",

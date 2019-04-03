@@ -1,2 +1,22 @@
 mixin main-nav()
     +b.NAV.main-nav
+        +e.UL.top-menu
+                each item in mainNav
+                    -var modifier = item.modifier ? item.modifier : ''
+                    +e.LI.top-menu-item
+                        if (item.innerMenu)
+                            +e.A.top-menu-link.has-subnav(href=item.link)= item.label
+                            +e.UL.second-menu(class=modifier)
+                                each subitem in item.innerMenu
+                                    -var itemModifier = subitem.modifier ? subitem.modifier : ''
+                                    +e.LI.second-menu-item(class=itemModifier)
+                                        if (subitem.innerMenu)
+                                            +e.A.second-menu-link.has-subnav(href=subitem.link)= subitem.label
+                                            +e.UL.third-menu
+                                                each subsubitem in subitem.innerMenu
+                                                    +e.LI.third-menu-item
+                                                        +e.A.third-menu-link(href=subsubitem.link)= subsubitem.label
+                                        else 
+                                            +e.A.second-menu-link(href=subitem.link)= subitem.label
+                        else
+                            +e.A.top-menu-link(href=item.link)= item.label

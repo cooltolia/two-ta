@@ -6,4 +6,10 @@
 
 body {
     background-color: #fff;
+    max-width: 2000px;
+    margin: 0 auto;
+
+    &.menu-opened {
+        overflow: hidden;
+    }
 }
