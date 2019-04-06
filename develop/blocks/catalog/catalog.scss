@@ -1,0 +1,42 @@
+.catalog {
+    padding-top: 25px;
+
+    border-top: 1px solid #e6e6e6;
+}
+
+.catalog__title {
+    padding: 0 50px;
+    margin: 0 auto 10px;
+
+    font-family: $sansation;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.catalog__description {
+    max-width: 360px;
+    padding: 0 20px;
+    margin: 0 auto 25px;
+
+    font-family: $opsans;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.14px;
+}
+
+.catalog__filter {
+    margin-bottom: 15px;
+}
+
+@media #{$tablet} {
+    .catalog {
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+}

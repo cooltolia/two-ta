@@ -15,6 +15,12 @@ jQuery(document).ready(function ($) {
      
 
      
+     
+
+     
+     
+
+     
      (function() {
 
          $slider = $('.instagram-preview__list');
@@ -287,6 +293,12 @@ jQuery(document).ready(function ($) {
      
 
      })();
+
+     
+     
+
+     
+     
 
      
      (function() {
