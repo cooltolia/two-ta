@@ -1,0 +1,37 @@
+.order-select {
+    position: relative;
+
+    color: #000;
+    font-family: $opsans;
+}
+
+.order-select__label {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+
+    font-size: 14px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        border: 3px solid black;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        
+        transform: translateY(-75%) rotate(-45deg);
+    }
+}
+
+.order-select__list {
+    display: none;
+}
+
+@media #{$tablet} {
+    .order-select__label {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,35 @@
+.layout-select {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.layout-select__option {
+    position: relative;
+    margin-left: 10px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    svg {
+        display: block;
+        width: auto;
+        height: auto;
+
+        transition: fill 300ms ease;
+    }
+
+    &--three,
+    &--six {
+        display: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        svg {
+            fill: $themecolor;
+        }
+    }
+}

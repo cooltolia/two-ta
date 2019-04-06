@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="30" viewBox="0 0 47 30">
-<g>
-<g transform="translate(-1110 -291)" fill="#e9d">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="30" viewBox="0 0 47 30" fill="#b3b3b3">
+<g transform="translate(-1110 -291)">
     <path d="M1110 304v-13h13v13z"/>
     <path d="M1127 304v-13h13v13z"/>
     <path d="M1144 304v-13h13v13z"/>
     <path d="M1110 321v-13h13v13z"/>
     <path d="M1127 321v-13h13v13z"/>
     <path d="M1144 321v-13h13v13z"/>
-</g>
 </g>
 </svg>
 

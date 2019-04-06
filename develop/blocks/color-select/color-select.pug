@@ -1,0 +1,10 @@
+mixin color-select()
+    +b.color-select
+        +e.label Цвет
+        +e.drop-down
+            +e.list
+                each color in productColors
+                    +e.A.item(href='#')
+                        +e.SPAN.preview(style='background-color: ' + color.color)
+                        +e.SPAN.name= color.name
+            +e.A.reset(href='#') Сбросить фильтр

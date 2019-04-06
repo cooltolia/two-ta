@@ -6,6 +6,19 @@ jQuery(document).ready(function ($) {
      
 
      
+     ;(function() {
+
+         var $trigger = $('.color-select__label');
+
+         $trigger.on('click', function() {
+
+             $(this).toggleClass('active');
+
+         })
+
+     })();
+
+     
      
 
      
@@ -67,6 +80,9 @@ jQuery(document).ready(function ($) {
 
      })();
 
+     
+
+     
      
 
      
@@ -293,6 +309,9 @@ jQuery(document).ready(function ($) {
      
 
      })();
+
+     
+     
 
      
      
