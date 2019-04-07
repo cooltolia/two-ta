@@ -59,3 +59,34 @@
         margin-left: auto;
     }
 }
+
+@media #{$tablet} {
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter__row {
+        padding: 25px 30px;
+
+        &:first-child {
+            border-bottom: none;
+        }
+    }
+
+    .filter__category {
+        margin-bottom: 0;
+        margin-right: 20px;
+
+        font-size: 16px;
+    }
+
+    .filter__sorting {
+        margin-bottom: 0;
+    }
+
+    .filter__sort-type {
+        margin-bottom: 0;
+    }
+}

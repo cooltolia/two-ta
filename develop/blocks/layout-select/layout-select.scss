@@ -7,6 +7,10 @@
 .layout-select__option {
     position: relative;
     margin-left: 10px;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
 
     &:first-child {
         margin-left: 0;
@@ -25,11 +29,23 @@
         display: none;
     }
 
+    &.active,
     &:hover,
     &:active,
     &:focus {
         svg {
             fill: $themecolor;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .layout-select__option {
+        display: none;
+
+        &--three,
+        &--six {
+            display: block;
         }
     }
 }

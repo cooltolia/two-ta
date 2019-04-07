@@ -1,2 +1,6 @@
 mixin products()
     +b.SECTION.products
+        +e.list
+            each product in products
+                +e.product
+                    +product(product)

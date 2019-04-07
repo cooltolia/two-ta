@@ -12,6 +12,8 @@
 
     font-size: 14px;
 
+    cursor: pointer;
+
     &::before {
         content: '';
         position: absolute;
@@ -47,14 +49,24 @@
 }
 
 .color-select__drop-down {
-    display: none;
     position: absolute;
     width: 100%;
     min-width: 320px;
+    top: 35px;
     left: -15px;
     z-index: 9;
+    opacity: 0;
 
     background-color: #f5f5f5;
+
+    pointer-events: none;
+
+    transition: opacity 300ms ease;
+
+    &.active {
+        opacity: 1;
+        pointer-events: initial;
+    }
 }
 
 .color-select__list {
@@ -69,6 +81,26 @@
     align-items: center;
 
     margin-bottom: 14px;
+
+    &.selected {
+        .color-select__preview {
+            border: 2px solid #000;
+        }
+
+        .color-select__name {
+            color: #000;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        
+        .color-select__name {
+            color: #000;
+        }
+    }
 }
 
 .color-select__preview {
@@ -81,12 +113,16 @@
     border-radius: 50%;
     border: 1px solid #d9d9d9;
     background-clip: content-box;
+
+    transition: border 300ms ease;
 }
 
 .color-select__name {
     color: #666666;
     font-size: 14px;
     font-weight: 400;
+
+    transition: color 300ms ease;
 }
 
 @media #{$tablet} {

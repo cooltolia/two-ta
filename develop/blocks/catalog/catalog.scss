@@ -32,11 +32,32 @@
 
 .catalog__filter {
     margin-bottom: 15px;
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 5;
+    }
 }
 
 @media #{$tablet} {
     .catalog {
         padding-top: 45px;
         padding-bottom: 25px;
+    }
+
+    .catalog__title {
+        font-size: 32px;
+        letter-spacing: 1.6px;
+    }
+
+    .catalog__description {
+        max-width: 400px;
+    }
+
+    .catalog__filter {
+        margin-bottom: 30px;
     }
 }

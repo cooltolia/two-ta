@@ -1,2 +1,18 @@
-mixin product()
+mixin product(data)
     +b.ARTICLE.product
+        +e.A.link(href='#')
+        +e.image
+            +e.flipper-image
+                +e.front-image
+                    picture
+                        source(srcset=data.front_image media="(min-width: 769px)")
+                        img(src=data.front_image_s alt=data.name)
+                +e.back-image
+                    picture
+                        source(srcset=data.back_image media="(min-width: 769px)")
+                        img(src=data.back_image_s alt=data.name)
+        +e.row
+            +e.name= data.name
+            +e.BUTTON.like
+        +e.row
+            +e.price= data.price
