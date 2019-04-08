@@ -8,9 +8,12 @@
 
         $(document).on('scroll', function(e) {
             var scrollTop = $(this).scrollTop();
-
+            var header = $('.main-header');
+            var headerHeight = header.outerHeight();
+            
             if (scrollTop >= filterOffset) {
                 filter.addClass('fixed');
+                filter.css('top', headerHeight + 'px');
                 products.css('paddingTop', filterHeight + 'px');
             } else {
                 filter.removeClass('fixed');

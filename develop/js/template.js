@@ -1,12 +1,16 @@
-
 $.noConflict();
-jQuery(document).ready(function ($) {
-    $("body").removeClass("pageload");
+jQuery(document).ready(function($) {
+    $('body').removeClass('pageload');
 
-     //=require ../blocks/**/*.js 
-    
+    //=require ../blocks/**/*.js
+
+    var header = $('.main-header');
+    var headerHeight = header.outerHeight();
+
+    $('body').css('paddingTop', headerHeight + 'px');
+
     // (function () {
-     /*    function logElementEvent(eventName, element) {
+    /*    function logElementEvent(eventName, element) {
             console.log(new Date().getTime(), eventName, element.getAttribute('data-src'));
         }
 
@@ -14,12 +18,12 @@ jQuery(document).ready(function ($) {
             console.log(new Date().getTime(), eventName, elementsLeft + " images left");
         } */
 
-        // function createImageFragment(srcUrl) {
-        //     var imageFragment = document.createElement('img');
-        //     imageFragment.setAttribute('src', srcUrl);
-        //     return imageFragment;
-        // }
-        /* ll = new LazyLoad({
+    // function createImageFragment(srcUrl) {
+    //     var imageFragment = document.createElement('img');
+    //     imageFragment.setAttribute('src', srcUrl);
+    //     return imageFragment;
+    // }
+    /* ll = new LazyLoad({
             threshold: 500,
             elements_selector: ".lazyload",
             callback_enter: function (element) {

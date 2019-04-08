@@ -31,7 +31,9 @@
     right: 0;
     bottom: 0;
 
-    transition: transform 300ms ease;
+    transition: transform 1000ms ease-out;
+
+    will-change: transform;
 
     img {
         width: 100%;
@@ -41,7 +43,7 @@
     &:hover,
     &:active,
     &:focus {
-        transform: scale(1.1);
+        transform: scale(1.075);
     }
 }
 

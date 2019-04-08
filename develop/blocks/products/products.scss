@@ -37,6 +37,9 @@
     margin-bottom: 20px;
 
     max-width: calc(100% / 2);
+
+    transition: width 300ms ease, max-width 300ms ease;
+    will-change: width, max-width;
 }
 
 @media #{$tablet} {
