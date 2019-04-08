@@ -1,7 +1,7 @@
-mixin product(data)
-    +b.ARTICLE.product
-        +e.A.link(href='#')
-        +e.image
+mixin product-card(data)
+    +b.ARTICLE.product-card
+        +e.A.link(href=data.link)
+        +e.A.image(href=data.link)
             +e.flipper-image
                 +e.front-image
                     picture

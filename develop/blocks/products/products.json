@@ -5,6 +5,7 @@
             "front_image_s": "/images/catalog/product1_s.png",
             "back_image": "/images/catalog/product1_hover.png",
             "back_image_s": "/images/catalog/product1_s_hover.png",
+            "link": "/product-page.html",
             "name": "Bukowski",
             "price": "10900 руб."
         },
@@ -13,6 +14,7 @@
             "front_image_s": "/images/catalog/product2_s.png",
             "back_image": "/images/catalog/product2_hover.png",
             "back_image_s": "/images/catalog/product2_s_hover.png",
+            "link": "/product-page.html",
             "name": "Henry",
             "price": "7900 руб."
         },
@@ -21,6 +23,7 @@
             "front_image_s": "/images/catalog/product3_s.png",
             "back_image": "/images/catalog/product3_hover.png",
             "back_image_s": "/images/catalog/product3_s_hover.png",
+            "link": "/product-page.html",
             "name": "Walter",
             "price": "8700 руб."
         },
@@ -29,6 +32,7 @@
             "front_image_s": "/images/catalog/product4_s.png",
             "back_image": "/images/catalog/product4_hover.png",
             "back_image_s": "/images/catalog/product4_s_hover.png",
+            "link": "/product-page.html",
             "name": "Alfred Craft",
             "price": "10900 руб."
         },
@@ -37,6 +41,7 @@
             "front_image_s": "/images/catalog/product5_s.png",
             "back_image": "/images/catalog/product5_hover.png",
             "back_image_s": "/images/catalog/product5_s_hover.png",
+            "link": "/product-page.html",
             "name": "Bukowski",
             "price": "10900 руб."
         },
@@ -45,6 +50,7 @@
             "front_image_s": "/images/catalog/product6_s.png",
             "back_image": "/images/catalog/product6_hover.png",
             "back_image_s": "/images/catalog/product6_s_hover.png",
+            "link": "/product-page.html",
             "name": "Henry",
             "price": "10900 руб."
         },
@@ -53,6 +59,7 @@
             "front_image_s": "/images/catalog/product7_s.png",
             "back_image": "/images/catalog/product7_hover.png",
             "back_image_s": "/images/catalog/product7_s_hover.png",
+            "link": "/product-page.html",
             "name": "Denzel",
             "price": "9500 руб."
         },
@@ -61,6 +68,7 @@
             "front_image_s": "/images/catalog/product8_s.png",
             "back_image": "/images/catalog/product8_hover.png",
             "back_image_s": "/images/catalog/product8_s_hover.png",
+            "link": "/product-page.html",
             "name": "Denzel",
             "price": "9500 руб."
         },
@@ -69,6 +77,7 @@
             "front_image_s": "/images/catalog/product9_s.png",
             "back_image": "/images/catalog/product9_hover.png",
             "back_image_s": "/images/catalog/product9_s_hover.png",
+            "link": "/product-page.html",
             "name": "Denzel",
             "price": "9500 руб."
         },
@@ -77,6 +86,7 @@
             "front_image_s": "/images/catalog/product10_s.png",
             "back_image": "/images/catalog/product10_hover.png",
             "back_image_s": "/images/catalog/product10_s_hover.png",
+            "link": "/product-page.html",
             "name": "Harvey",
             "price": "6900 руб."
         },
@@ -85,6 +95,7 @@
             "front_image_s": "/images/catalog/product11_s.png",
             "back_image": "/images/catalog/product11_hover.png",
             "back_image_s": "/images/catalog/product11_s_hover.png",
+            "link": "/product-page.html",
             "name": "Francis Backpack",
             "price": "11500 руб."
         },
@@ -93,6 +104,7 @@
             "front_image_s": "/images/catalog/product12_s.png",
             "back_image": "/images/catalog/product12_hover.png",
             "back_image_s": "/images/catalog/product12_s_hover.png",
+            "link": "/product-page.html",
             "name": "Hemingway",
             "price": "8200 руб."
         }

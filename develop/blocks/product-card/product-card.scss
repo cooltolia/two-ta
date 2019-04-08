@@ -1,24 +1,25 @@
-.product {
+.product-card {
     position: relative;
 
     font-family: $opsans;
     color: #000;
 }
 
-.product__image {
+.product-card__image {
+    display: block;
     position: relative;
     perspective: 1000px;
     padding-top: 100%;
     margin-bottom: 15px;
 
     &:hover {
-        .product__flipper-image {
+        .product-card__flipper-image {
             transform: rotateY(180deg);
         }
     }
 }
 
-.product__flipper-image {
+.product-card__flipper-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,8 +31,8 @@
 
 }
 
-.product__front-image,
-.product__back-image {
+.product-card__front-image,
+.product-card__back-image {
     backface-visibility: hidden;
 
     position: absolute;
@@ -51,22 +52,22 @@
     }
 }
 
-.product__front-image {
+.product-card__front-image {
     z-index: 2;
     transform: rotateY(0deg);
 }
 
-.product__back-image {
+.product-card__back-image {
     transform: rotateY(180deg);
 }
 
-.product__row {
+.product-card__row {
     display: flex;
     justify-content: space-between;
     align-items: center; 
 }
 
-.product__name {
+.product-card__name {
     font-family: $sansation;
     font-size: 16px;
     font-weight: 300;
@@ -76,13 +77,13 @@
     transition: color 300ms ease;
 }
 
-.product:hover {
-    .product__name {
+.product-card:hover {
+    .product-card__name {
         color: $themecolor;
     }
 }
 
-.product__like {
+.product-card__like {
     position: relative;
     width: 22px;
     height: 22px;
@@ -98,13 +99,13 @@
     background-origin: content-box;
 }
 
-.product__price {
+.product-card__price {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.product__link {
+.product-card__link {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -113,17 +114,17 @@
 }
 
 @media #{$tablet} {
-    .product__image {
+    .product-card__image {
         margin-bottom: 20px;
     }
 
-    .product__name {
+    .product-card__name {
         margin-bottom: 5px;
 
         font-size: 18px;
     }
 
-    .product__like {
+    .product-card__like {
         width: 25px;
         height: 25px;
         padding: 5px;

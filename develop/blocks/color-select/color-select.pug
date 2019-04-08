@@ -7,4 +7,5 @@ mixin color-select()
                     +e.A.item(href='#')
                         +e.SPAN.preview(style='background-color: ' + color.color)
                         +e.SPAN.name= color.name
-            +e.A.reset(href='#') Сбросить фильтр
+            +e.footer
+                +e.A.reset(href='#') Сбросить фильтр

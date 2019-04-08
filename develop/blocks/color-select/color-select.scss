@@ -29,6 +29,7 @@
         transition: all 300ms ease;
     }
 
+    &.active,
     &:hover,
     &:active,
     &:focus {
@@ -52,6 +53,7 @@
     position: absolute;
     width: 100%;
     min-width: 320px;
+    max-width: 660px;
     top: 35px;
     left: -15px;
     z-index: 9;
@@ -84,7 +86,8 @@
 
     &.selected {
         .color-select__preview {
-            border: 2px solid #000;
+            border-color: #000;
+            box-shadow: 0 0 0 1px #000;
         }
 
         .color-select__name {
@@ -96,7 +99,7 @@
     &:active,
     &:focus {
         text-decoration: none;
-        
+
         .color-select__name {
             color: #000;
         }
@@ -114,7 +117,7 @@
     border: 1px solid #d9d9d9;
     background-clip: content-box;
 
-    transition: border 300ms ease;
+    transition: border 300ms ease, box-shadow 300ms ease;
 }
 
 .color-select__name {
@@ -125,8 +128,60 @@
     transition: color 300ms ease;
 }
 
+.color-select__footer {
+    padding: 0 20px;
+}
+
+.color-select__reset {
+    position: relative;
+    display: block;
+    padding: 14px 0 14px 20px;
+
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: color 300ms ease;
+
+    border-top: 1px solid #e6e6e6;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 13px;    
+        height: 1px;
+
+        background-color: #000;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $themecolor;
+        text-decoration: none;
+    }
+}
+
 @media #{$tablet} {
     .color-select__label {
         font-size: 16px;
+    }
+
+    .color-select__drop-down {
+        top: 50px;
+        left: -330px;
     }
 }
