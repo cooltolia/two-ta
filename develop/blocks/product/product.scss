@@ -1,0 +1,42 @@
+.product {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    font-family: $opsans;
+
+    border-top: 1px solid #e6e6e6;
+}
+
+.product__slider {
+    margin-bottom: 22px;
+}
+
+@media #{$tablet} {
+    .product {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    .product__wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .product__slider {
+        flex: 1 1 auto;
+        margin-bottom: 0;
+        width: 300px;
+    }
+
+    .product__description {
+        width: 240px;
+        margin-left: 30px;
+        flex: 0 0 auto
+    }
+}
+
+@media #{$desktop} {
+    .product__description {
+        width: 295px;
+    }
+}

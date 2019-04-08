@@ -1,0 +1,8 @@
+mixin recommendations()
+    +b.SECTION.recommendations
+        +inner
+            +e.H2.title Похожие товары
+            +e.list
+                each product in recommendations
+                    +e.product
+                        +product-card(product)

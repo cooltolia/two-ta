@@ -1,0 +1,222 @@
+.product-data {
+    color: $text-color-d;
+    font-family: $opsans;
+}
+
+.product-data__name {
+    margin: 0 0 2px;
+
+    font-family: $sansation;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.product-data__price {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-data__actions {
+    margin-bottom: 25px;
+}
+
+.product-data__action {
+    margin-bottom: 15px;
+}
+
+.product-data__button {
+    @include btn-theme();
+    display: inline-block;
+    padding: 12px 20px;
+
+    &--transparent {
+        @include btn-transparent;
+        display: inline-block;
+    }
+
+    &--dark {
+        @include btn-transparent($text-color-d);
+        display: inline-block;
+    }
+}
+
+.product-data__like {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+
+    color: $text-color-d;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: color 300ms ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        background-image: url('../images/favorite.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $themecolor;
+        text-decoration: none;
+    }
+}
+
+.product-data__accordion {
+    margin-bottom: 30px;
+}
+
+.product-data__accordion-item {
+    padding: 15px 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+
+    &:not(:first-child) {
+        margin-top: -1px;
+    }
+}
+
+.product-data__accordion-title {
+    margin: 0;
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+
+    font-family: $sansation;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 7px;
+        height: 7px;
+
+        top: 50%;
+        border: 1px solid black;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        transform: translateY(-100%) rotate(-45deg);
+        transition: all 300ms ease;
+    }
+
+    &.active {
+        &::before {
+            transform: rotate(-225deg) translateX(-50%);
+        }
+    }
+}
+
+.product-data__accordion-data {
+    display: none;
+    padding: 15px 0;
+
+    color: $text-color-l;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    p {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.product-data__details-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-data__details-item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        left: 0;
+        top: 5px;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    &--weight::before {
+        background-image: url('../images/weight.png');
+    }
+
+    &--material::before {
+        background-image: url('../images/material.png');
+    }
+
+    &--service::before {
+        background-image: url('../images/service.png');
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.product-data__details-title {
+    color: $text-color-d;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-data__details-text {
+    color: $text-color-l;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media #{$desktop} {
+    .product-data__name {
+        font-size: 32px;
+    }
+    .product-data__price {
+        font-size: 22px;
+    }
+
+    .product-data__accordion-title {
+        font-size: 20px;
+    }
+}

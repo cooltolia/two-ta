@@ -1,0 +1,56 @@
+.recommendations {
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    font-family: $sansation;
+}
+
+.recommendations__title {
+    margin: 0 0 22px;
+
+    color: $text-color-d;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.recommendations__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -7px -20px;
+}
+
+.recommendations__product {
+    width: 40%;
+    flex: 1 1 auto;
+    margin: 0 7px 20px;
+
+    max-width: calc(100% / 2);
+}
+
+@media #{$tablet} {
+    .recommendations {
+        padding-top: 25px;
+        padding-bottom: 80px;
+    }
+
+    .recommendations__title {
+        margin-bottom: 30px;
+        
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .recommendations__list {
+        margin: 0 -15px -20px;
+    }
+
+    .recommendations__product {
+        width: 20%;
+        flex: 1 1 auto;
+        margin: 0 15px 20px;
+
+        max-width: calc(100% / 2);
+    }
+}

@@ -459,6 +459,44 @@
 			"price": "8200 руб."
 		}
 	],
+	"recommendations": [
+		{
+			"front_image": "/images/catalog/product1.png",
+			"front_image_s": "/images/catalog/product1_s.png",
+			"back_image": "/images/catalog/product1_hover.png",
+			"back_image_s": "/images/catalog/product1_s_hover.png",
+			"link": "/product-page.html",
+			"name": "Bukowski",
+			"price": "10900 руб."
+		},
+		{
+			"front_image": "/images/catalog/product2.png",
+			"front_image_s": "/images/catalog/product2_s.png",
+			"back_image": "/images/catalog/product2_hover.png",
+			"back_image_s": "/images/catalog/product2_s_hover.png",
+			"link": "/product-page.html",
+			"name": "Henry",
+			"price": "7900 руб."
+		},
+		{
+			"front_image": "/images/catalog/product3.png",
+			"front_image_s": "/images/catalog/product3_s.png",
+			"back_image": "/images/catalog/product3_hover.png",
+			"back_image_s": "/images/catalog/product3_s_hover.png",
+			"link": "/product-page.html",
+			"name": "Walter",
+			"price": "8700 руб."
+		},
+		{
+			"front_image": "/images/catalog/product4.png",
+			"front_image_s": "/images/catalog/product4_s.png",
+			"back_image": "/images/catalog/product4_hover.png",
+			"back_image_s": "/images/catalog/product4_s_hover.png",
+			"link": "/product-page.html",
+			"name": "Alfred Craft",
+			"price": "10900 руб."
+		}
+	],
 	"sideMenu": [
 		{
 			"label": "Каталог",

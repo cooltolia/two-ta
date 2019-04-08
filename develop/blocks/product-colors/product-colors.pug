@@ -1,0 +1,8 @@
+mixin product-colors()
+    +b.SECTION.product-colors
+        +inner
+            +e.H2.title Другие цвета
+            +e.list
+                each item in [1, 2, 3, 4, 5, 6, 1, 2]
+                    +e.A.item(href='#')
+                        img(src="/images/product-colors/color" + item + ".jpg", alt="")

@@ -1,0 +1,9 @@
+mixin product-slider()
+    +b.product-slider
+        +e.images
+            each img in [1, 2, 3, 4]
+                +e.slide
+                    +e.image
+                        img(src="../images/product-slider/product" + img + ".jpg", alt="")
+                    +e.likes
+                        +e.SPAN.likes-value 2233

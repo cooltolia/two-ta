@@ -2,15 +2,8 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    min-width: 300px;
     max-width: 480px;
-    padding: 0 10px;
-}
-
-@media (min-width: 481px) {
-    .inner {
-        max-width: 740px;
-    }
+    padding: 0 15px;
 }
 
 @media #{$tablet} {
@@ -22,7 +15,7 @@
 
 @media #{$desktop} {
     .inner {
-        max-width: 940px;
+        max-width: 980px;
         padding: 0 20px;
     }
 }

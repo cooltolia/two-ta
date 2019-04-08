@@ -1,0 +1,31 @@
+mixin product-data()
+    +b.product-data
+        +e.H2.name Bukowski
+        +e.price 10900 руб.
+        +e.actions
+            +e.action
+                +e.A.button(href='#') В корзину
+            +e.action
+                +e.A.button.--transparent(href='#') Персонализировать
+            +e.action
+                +e.A.like(href='#') Добавить в избранное
+        +e.accordion
+            +e.accordion-item
+                +e.H3.accordion-title Описание
+                +e.accordion-data
+                    p
+                        | Сумка Bukowski сделана нами специально для мужчин, ценящих практичность. Обладая исключительно мужественным дизайном, эта модель сочетает в себе универсальность небольшой дорожной сумки с удобными размерами сумки на каждый день. Кожа с эффектом старения - при использовании остаются естественные потёртости, которые со временем придают изделию благородный вид и индивидуальность! При желании все следы легко можно убрать при помощи обычной губки и бесцветного воска для кожи!
+            +e.accordion-item
+                +e.H3.accordion-title детали
+                +e.accordion-data
+                    +e.UL.details-list
+                        +e.LI.details-item.--weight
+                            +e.details-title Размер / Вес
+                            +e.details-text 30 х 40 х 8 см. Плечевой ремень: 75-130 см. Вес: 1100г
+                        +e.LI.details-item.--material
+                            +e.details-title Материалы
+                            +e.details-text Натуральная кожа
+                        +e.LI.details-item.--service
+                            +e.details-title Уход
+                            +e.details-text Протирать сухой мягкой тканью. Обрабатывать универсальным гелем SAPHIR.
+        +e.A.button.--dark(href='#') Условия доставки

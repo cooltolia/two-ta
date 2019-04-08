@@ -1,0 +1,16 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var alias = "m"
+doctype html
+html(lang='ru')
+  +doc-header
+  body.pageload.no-js
+    +main-header
+    +product
+    +product-video
+    +product-colors
+    +product-instagram
+    +recommendations
+    +main-footer
+    +doc-footer

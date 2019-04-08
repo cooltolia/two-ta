@@ -1,0 +1,9 @@
+mixin product-instagram()
+    +b.SECTION.product-instagram
+        +inner
+            +e.H2.title Bukowski в Instagram
+            +e.list
+                each item in [1, 2, 3]
+                    +e.A.item(href='https://www.instagram.com/twota/?hl=ru' style='background-image: url(images/product-instagram/photo' + item + '.jpg)')
+                        +e.likes
+                            +e.SPAN.likes-value 777

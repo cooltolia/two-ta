@@ -640,6 +640,214 @@ jQuery(document).ready(function ($) {
      
 
      
+     (function() {
+
+         var $title = $('.product-data__accordion-title');
+
+         var $data = $('.product-data__accordion-data');
+
+     
+
+         if (window.matchMedia('(min-width: 1200px)').matches) {
+
+             $title.addClass('active');
+
+             $data.addClass('active');
+
+         }
+
+         $title.on('click', function() {
+
+             $(this).addClass('active');
+
+     
+
+             var $nextData = $(this).next('.product-data__accordion-data');
+
+     
+
+             $title.not($(this)).each(function() {
+
+                 $(this).removeClass('active');
+
+             });
+
+     
+
+             $data.not($nextData).each(function() {
+
+                 $(this).slideUp(250, function() {
+
+                     $(this).removeClass('active');
+
+                 });
+
+             });
+
+     
+
+             if ($nextData.hasClass('active')) {
+
+                 $(this).removeClass('active');
+
+     
+
+                 $nextData.slideUp(250, function() {
+
+                     $nextData.removeClass('active');
+
+                 });
+
+     
+
+                 return;
+
+             }
+
+     
+
+             $nextData.slideDown(250, function() {
+
+                 $nextData.addClass('active');
+
+             });
+
+         });
+
+     })();
+
+     
+
+     
+     (function() {
+
+         $slider = $('.product-instagram__list');
+
+     
+
+         $slider.slick({
+
+             speed: 500,
+
+             arrows: false,
+
+             dots: true,
+
+             infinite: true,
+
+             slidesPerRow: 1,
+
+             slidesToShow: 1,
+
+             slidesToScroll: 1,
+
+             swipe: true,
+
+             mobileFirst: true,
+
+             // autoplay: true,
+
+             // autoplaySpeed: 3000,
+
+             responsive: [
+
+                 {
+
+                     breakpoint: 768,
+
+                     settings: 'unslick'
+
+                 }
+
+             ]
+
+         });
+
+     })();
+
+     
+
+     
+     (function() {
+
+         $slider = $('.product-slider__images');
+
+     
+
+         $slider.slick({
+
+             speed: 500,
+
+             arrows: false,
+
+             dots: true,
+
+             infinite: true,
+
+             slidesPerRow: 1,
+
+             slidesToShow: 1,
+
+             slidesToScroll: 1,
+
+             swipe: true,
+
+             mobileFirst: true,
+
+             // autoplay: true,
+
+             // autoplaySpeed: 3000,
+
+             responsive: [
+
+                 {
+
+                     breakpoint: 768,
+
+                     settings: {
+
+                         slidesPerRow: 1,
+
+                         slidesToShow: 1,
+
+                         customPaging: function(slider, i) {
+
+                             var slide = i + 1;
+
+                             return (
+
+                                 '<image class="product-slider__thumbnail" src="/images/product-slider/product' +
+
+                                 slide +
+
+                                 '.jpg"></image>'
+
+                             );
+
+                         }
+
+                     }
+
+                 }
+
+             ]
+
+         });
+
+     })();
+
+     
+
+     
+     
+
+     
+     
+
+     
+     
+
+     
      
 
      

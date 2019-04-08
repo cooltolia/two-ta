@@ -1,0 +1,195 @@
+.product-slider {
+    width: 100%;
+    height: auto;
+}
+
+.product-slider__images {
+    .slick-dots {
+        position: absolute;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        bottom: 10px;
+
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 5px 3px;
+            margin-right: 5px;
+
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.slick-active,
+            &:hover,
+            &:active,
+            &:focus {
+                button {
+                    transform: scale(1.35);
+                    background-color: #fff;
+                }
+            }
+        }
+
+        button {
+            display: block;
+            padding: 0;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 0;
+            line-height: 0;
+
+            width: 6px;
+            height: 6px;
+
+            background-color: rgba(#fff, 0.6);
+            border-radius: 50%;
+
+            transition: background 300ms ease, transform 300ms ease;
+        }
+    }
+}
+
+.product-slider__slide {
+    position: relative;
+    width: 100%;
+}
+
+.product-slider__image {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    background-color: #eeeeee;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        .product-slider__likes {
+            opacity: 1;
+        }
+    }
+}
+
+.product-slider__likes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    background-color: rgba(#333333, 0.8);
+
+    transition: opacity 300ms ease;
+}
+
+.product-slider__likes-value {
+    position: absolute;
+    padding-left: 27px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    font-family: $ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 16px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-image: url('../images/like.png');
+    }
+}
+
+@media #{$tablet} {
+    .product-slider__images {
+        .slick-dots {
+            padding-top: 10px;
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            width: calc(100% + 10px);
+            bottom: 0;
+
+            li {
+                position: relative;
+                padding: 0;
+                width: 20%;
+                max-width: calc(100% / 4 - 20px);
+                margin-right: 20px;
+                margin-top: 10px;
+                flex: 1 1 auto;
+
+                &::before {
+                    content: '';
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    padding-top: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+
+                    background-color: #666666;
+                    opacity: 0.3;
+
+                    transition: opacity 300ms ease;
+                }
+
+                &.slick-active::after {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    margin-right: 20px;
+                }
+
+                img {
+                    position: absolute;
+                    @include img;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+}
