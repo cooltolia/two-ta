@@ -425,21 +425,25 @@ jQuery(document).ready(function($) {
 
     
 
-            if (scrollTop >= 100) {
+            if (scrollTop >= 200) {
 
                 header.addClass('minimized');
 
-                var headerHeight = header.outerHeight();
+                hiddenMenu.addClass('shifted');
 
-                hiddenMenu.css('top', headerHeight + 'px');
+                // var headerHeight = header.outerHeight();
+
+                // hiddenMenu.css('top', headerHeight + 'px');
 
             } else {
 
                 header.removeClass('minimized');
 
-                var headerHeight = header.outerHeight();
+                hiddenMenu.removeClass('shifted');
 
-                hiddenMenu.css('top', headerHeight + 'px');
+                // var headerHeight = header.outerHeight();
+
+                // hiddenMenu.css('top', headerHeight + 'px');
 
             }
 
@@ -450,42 +454,6 @@ jQuery(document).ready(function($) {
     
 
     
-    (function() {
-
-        var $topLinks = $('.main-nav__top-menu-link.has-subnav');
-
-    
-
-        // $topLinks.hover(
-
-        //     function() {
-
-        //         var $this = $(this);
-
-        //         console.log($this);
-
-        //         var $submenu = $this.next();
-
-        //         $submenu.addClass('active');
-
-        //     },
-
-        //     function() {
-
-        //         var $this = $(this);
-
-        //         console.log($this);
-
-        //         var $submenu = $this.next();
-
-        //         $submenu.removeClass('active');
-
-        //     }
-
-        // );
-
-    })();
-
     
 
     

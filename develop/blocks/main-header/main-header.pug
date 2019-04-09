@@ -17,3 +17,10 @@ mixin main-header
                 +hamburger
             +e.side-menu
                 +side-menu
+        +b.search
+            +inner
+                +e.FORM.form
+                    +e.input-wrapper
+                        +e.INPUT.input(name='search', id='search-input' placeholder='Поиск')
+                        +e.BUTTON.reset
+                    +e.LABEL.label(for='search-input') Введите запрос и нажмите Enter

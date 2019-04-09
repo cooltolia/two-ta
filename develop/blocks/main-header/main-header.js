@@ -5,14 +5,16 @@
     $(document).on('scroll', function(e) {
         var scrollTop = $(this).scrollTop();
 
-        if (scrollTop >= 100) {
+        if (scrollTop >= 200) {
             header.addClass('minimized');
-            var headerHeight = header.outerHeight();
-            hiddenMenu.css('top', headerHeight + 'px');
+            hiddenMenu.addClass('shifted');
+            // var headerHeight = header.outerHeight();
+            // hiddenMenu.css('top', headerHeight + 'px');
         } else {
             header.removeClass('minimized');
-            var headerHeight = header.outerHeight();
-            hiddenMenu.css('top', headerHeight + 'px');
+            hiddenMenu.removeClass('shifted');
+            // var headerHeight = header.outerHeight();
+            // hiddenMenu.css('top', headerHeight + 'px');
         }
     });
 })();

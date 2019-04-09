@@ -3,7 +3,7 @@ mixin main-nav()
         +e.UL.top-menu
                 each item in mainNav
                     -var modifier = item.modifier ? item.modifier : ''
-                    +e.LI.top-menu-item
+                    +e.LI.top-menu-item(class=modifier)
                         if (item.innerMenu)
                             +e.A.top-menu-link.has-subnav(href=item.link)= item.label
                             +e.UL.second-menu(class=modifier)
