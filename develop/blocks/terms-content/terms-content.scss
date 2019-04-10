@@ -1,10 +1,111 @@
 .terms-content {
+    font-family: $opsans;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    h1 {
+        margin: 0 0 20px;
+
+        color: $text-color-d;
+        font-family: $sansation;
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+
+    h2 {
+        margin: 0 0 20px;
+
+        color: $text-color-d;
+        font-family: $sansation;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.35;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p {
+        margin: 0 0 25px;
+        color: $text-color-l;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+
+        a {
+            color: $text-color-d;
+            text-decoration: underline;
+
+            transition: color 300ms ease;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $themecolor;
+            }
+        }
+
+        b {
+            color: $text-color-d;
+            font-weight: 400;
+        }
+    }
+
     ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
         counter-reset: list;
     }
 
-    li::before {
-        counter-increment: list;
-        content: counter(section);
+    li {
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 1px;
+            counter-increment: list;
+            content: counter(list) '.';
+
+            color: $text-color-d;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .terms-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        
+        h1 {
+            margin-bottom: 25px;
+
+            font-size: 32px;
+            letter-spacing: 1.2px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 35px;
+
+            font-size: 16px;
+        }
+
+        li {
+            padding-left: 30px;
+
+            &::before {
+                font-size: 16px;
+            }
+        }
     }
 }

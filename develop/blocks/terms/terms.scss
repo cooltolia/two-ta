@@ -1,15 +1,51 @@
 .terms {
-
-}
-
-.terms__wrapper {
-
+    font-family: $opsans;
 }
 
 .terms__sidebar {
+    position: fixed;
+    width: 100%;
+    top: 47px;
+    left: 0;
+    padding: 15px 0;
+    background-color: #fff;
+    z-index: 1;
 
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .terms__content {
-    
+    padding-top: 150px;
+}
+
+@media #{$tablet} {
+    .terms__sidebar {
+        width: auto;
+        max-width: 230px;
+        left: 10%;
+        top: 155px;
+        padding: 0;
+        border: none;
+    }
+
+    .terms__content {
+        padding-top: 0;
+        padding-left: 40%;
+    }
+}
+
+@media #{$desktop} {
+    .terms__sidebar {
+        left: 15%;
+    }
+
+    .terms__content {
+        padding-left: 35%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .terms__sidebar {
+        left: 20%;
+    }
 }

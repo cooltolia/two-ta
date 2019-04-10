@@ -1,0 +1,42 @@
+.map {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.map__wrapper {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../images/map.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.map__switches {
+    display: flex;
+    position: absolute;
+    margin: 20px 10px;
+    top: 0;
+    left: 0;
+}
+
+.map__switch {
+    @include btn-theme(#000);
+    margin-right: 15px;
+    padding: 8px 20px;
+
+    font-size: 12px;
+
+    &.current {
+        @include btn-theme;
+
+        font-size: 12px;
+    }
+}
+
+@media #{$tablet} {
+    .map__switches {
+        margin: 30px;
+    }
+}
