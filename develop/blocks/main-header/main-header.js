@@ -1,6 +1,22 @@
 (function() {
     var header = $('.main-header');
     var hiddenMenu = $('.main-nav__second-menu');
+    var searchTrigger = $('.main-header__action--search');
+    var search = $('.search');
+
+    searchTrigger.on('click', function() {
+        if (search.hasClass('active')) {
+            search.removeClass('active');
+        } else {
+            search.addClass('active');
+        }
+    });
+
+    $(document).click(function(e) {
+        if (search.has(e.target).length === 0 && $(e.target)[0] !== searchTrigger[0]) {
+            search.removeClass('active');
+        } else return;
+    });
 
     $(document).on('scroll', function(e) {
         var scrollTop = $(this).scrollTop();

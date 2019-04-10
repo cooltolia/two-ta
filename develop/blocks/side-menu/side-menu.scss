@@ -233,14 +233,6 @@
     font-weight: 400;
     letter-spacing: 0.7px;
     line-height: 1.2;
-
-    transition: color 300ms ease;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $themecolor;
-    }
 }
 
 .side-menu__phone {
@@ -263,8 +255,20 @@
     position: relative;
     padding-left: 22px;
 
+    color: $text-color;
+    text-decoration: none;
+
     border: none;
     background: none;
+
+    transition: color 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $themecolor;
+        text-decoration: none;
+    }
 
     &::before {
         content: '';
