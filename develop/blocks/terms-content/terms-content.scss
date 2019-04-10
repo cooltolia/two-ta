@@ -1,3 +1,10 @@
 .terms-content {
-    
+    ul {
+        counter-reset: list;
+    }
+
+    li::before {
+        counter-increment: list;
+        content: counter(section);
+    }
 }
