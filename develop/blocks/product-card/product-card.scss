@@ -86,17 +86,32 @@
 .product-card__like {
     position: relative;
     width: 22px;
-    height: 22px;
-    padding: 4px;
+    height: 17px;
 
+    padding: 0;
     border: none;
     background: none;
 
-    background-image: url('../images/favorite.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: content-box;
+    svg {
+        position: absolute;
+        width: 22px;
+        height: 17px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        fill: #cccccc;
+
+        transition: fill 300ms ease;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        svg {
+            fill: $themecolor;
+        }
+    }
 }
 
 .product-card__price {
@@ -127,6 +142,5 @@
     .product-card__like {
         width: 25px;
         height: 25px;
-        padding: 5px;
     }
 }

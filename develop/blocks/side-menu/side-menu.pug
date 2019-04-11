@@ -28,11 +28,20 @@ mixin side-menu()
                 +e.LI.action
                     +e.A.phone(href='tel:+78127482446') +7 (812) 748-24-46
                 +e.LI.action
-                    +e.A.action-button.--login(href='#loginModal' data-target='#loginModal' data-toggle='modal') Вход
+                    +e.A.action-button.--login(href='#loginModal' data-target='#loginModal' data-toggle='modal') 
+                        span.icon
+                            +icon('login')
+                        | Вход
                 +e.LI.action
-                    +e.BUTTON.action-button.--favorite(type='button') Избранное
+                    +e.BUTTON.action-button.--favorite(type='button')
+                        span.icon
+                            +icon('favorite')
+                        | Избранное
                 +e.LI.action
-                    +e.BUTTON.action-button.--cart(type='button') Корзина
+                    +e.BUTTON.action-button.--cart(type='button')
+                        span.icon
+                            +icon('cart')
+                        | Корзина
                     
                 
                 

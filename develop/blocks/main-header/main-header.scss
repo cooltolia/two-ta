@@ -29,7 +29,7 @@
 
     img {
         display: block;
-        width: auto;
+        width: 87px;
         height: auto;
     }
 }
@@ -74,6 +74,7 @@
 }
 
 .main-header__action {
+    position: relative;
     width: 15px;
     height: 15px;
     margin-right: 15px;
@@ -84,24 +85,27 @@
 
     // TODO change for svg
 
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
     &:last-child {
         margin-right: 0;
     }
 
-    &--search {
-        background-image: url('../images/search.png');
+    svg {
+        @include svg-icon;
+        pointer-events: none;
+
+        fill: $text-color;
+
+        transition: fill 300ms ease;
     }
 
-    &--favorite {
-        background-image: url('../images/favorite.png');
-    }
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
 
-    &--cart {
-        background-image: url('../images/cart.png');
+        svg {
+            fill: $themecolor;
+        }
     }
 }
 
@@ -145,7 +149,7 @@
     height: 20px;
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 0;
     transform: translateY(-50%);
 
     padding: 0;
@@ -175,7 +179,11 @@
         transform: rotate(-45deg);
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+
         &::before,
         &::after {
             background-color: $themecolor;
@@ -184,9 +192,9 @@
 }
 
 .search__input {
-    flex: 1 1 auto;
+    width: 100%;
     padding: 3px 0;
-    margin-right: 30px;
+    padding-right: 30px;
 
     font-size: 24px;
     color: $text-color-d;
@@ -242,6 +250,10 @@
 
     .main-header__logo {
         margin: auto;
+
+        img {
+            width: 63px;
+        }
     }
 
     .main-header__phone {
@@ -280,19 +292,21 @@
         text-decoration: none;
         letter-spacing: 0.7px;
 
-        &::before {
-            content: '';
+        .icon {
             position: absolute;
-            width: 12px;
-            height: 15px;
+            width: 15px;
+            height: 19px;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
 
-            background-image: url('../images/login.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            svg {
+                @include svg-icon;
+
+                fill: $text-color;
+
+                transition: fill 300ms ease;
+            }
         }
 
         &:hover,
@@ -300,6 +314,10 @@
         &:focus {
             text-decoration: none;
             color: $themecolor;
+
+            .icon svg {
+                fill: $themecolor;
+            }
         }
     }
 

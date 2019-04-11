@@ -11,21 +11,31 @@
     height: 36px;
     margin-right: 10px;
 
-    background-size: cover;
+    background-color: #ebebeb;
+    border-radius: 50%;
 
-    &--instagram {
-        background-image: url('../images/socials/instagram.png');
-    }
+    transition: background-color 300ms ease;
 
-    &--facebook {
-        background-image: url('../images/socials/fb.png');
+    svg {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        fill: $text-color-l;
     }
 
     &--vk {
-        background-image: url('../images/socials/vk.png');
+        svg {
+            width: 18px;
+        }
     }
 
-    &--twitter {
-        background-image: url('../images/socials/twitter.png');
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken(#ebebeb, 20%);
     }
 }

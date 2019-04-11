@@ -5,14 +5,20 @@ mixin main-header
                 +main-nav
             +e.A.logo(href='/')
                 picture
-                    source(srcset="images/logo.png" media="(min-width: 769px)")
-                    img(src="images/logo_m.png" alt="TWO-TA логотип")
+                    source(srcset="images/logo.svg" media="(min-width: 769px)")
+                    img(src="images/logo_m.svg" alt="TWO-TA логотип")
             +e.A.phone(href='#callbackModal' data-target='#callbackModal' data-toggle='modal') +7 (812) 748-24-46
-            +e.A.login(href='#loginModal' data-target='#loginModal' data-toggle='modal') Вход
+            +e.A.login(href='#loginModal' data-target='#loginModal' data-toggle='modal') 
+                span.icon
+                    +icon('login')
+                | Вход
             +e.actions
-                +e.BUTTON.action.--search(type='button') Поиск
-                +e.BUTTON.action.--favorite(type='button') Избранное
-                +e.BUTTON.action.--cart(type='button') Корзина
+                +e.BUTTON.action.--search(type='button' title='Поиск') 
+                    +icon('search')
+                +e.BUTTON.action.--favorite(type='button' title='Избранное')
+                    +icon('favorite')
+                +e.BUTTON.action.--cart(type='button' title='Корзина')
+                    +icon('cart')
             +e.hamburger
                 +hamburger
             +e.side-menu
@@ -22,5 +28,5 @@ mixin main-header
                 +e.FORM.form
                     +e.input-wrapper
                         +e.INPUT.input(name='search', id='search-input' placeholder='Поиск')
-                        +e.BUTTON.reset
+                        +e.BUTTON.reset(type='button')
                     +e.LABEL.label(for='search-input') Введите запрос и нажмите Enter

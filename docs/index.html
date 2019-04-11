@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
     <link rel="stylesheet" href="css/vendor.css?2d4f790065">
-    <link rel="stylesheet" href="css/main.css?b699367e3c">
+    <link rel="stylesheet" href="css/main.css?ba4a125884">
     <!--[if lte IE 9]>
     <script src="libs/ie/html5shiv.js"></script>
     <script src="libs/ie/respond.src.js"></script>
@@ -94,7 +94,7 @@
               </li>
               <li class="main-nav__top-menu-item"><a class="main-nav__top-menu-link" href="/about">О нас</a>
               </li>
-              <li class="main-nav__top-menu-item"><a class="main-nav__top-menu-link has-subnav" href="/terms">Условия</a>
+              <li class="main-nav__top-menu-item small"><a class="main-nav__top-menu-link has-subnav" href="/terms">Условия</a>
                 <ul class="main-nav__second-menu small">
                   <li class="main-nav__second-menu-item"><a class="main-nav__second-menu-link" href="/terms">Гарантии</a>
                   </li>
@@ -118,14 +118,26 @@
           </nav><!--/ main-nav --> 
         </div><a class="main-header__logo" href="/">
         <picture>
-          <source srcset="images/logo.png" media="(min-width: 769px)"/><img src="images/logo_m.png" alt="TWO-TA логотип"/>
-        </picture></a><a class="main-header__phone">+7 (812) 748-24-46</a><a class="main-header__login" href="#loginModal" data-target="#loginModal" data-toggle="modal">Вход</a>
+          <source srcset="images/logo.svg" media="(min-width: 769px)"/><img src="images/logo_m.svg" alt="TWO-TA логотип"/>
+        </picture></a><a class="main-header__phone" href="#callbackModal" data-target="#callbackModal" data-toggle="modal">+7 (812) 748-24-46</a><a class="main-header__login" href="#loginModal" data-target="#loginModal" data-toggle="modal"> <span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#login"></use>
+          </svg></span>Вход</a>
         <div class="main-header__actions">
-          <button class="main-header__action main-header__action--search" type="button">Поиск
+          <button class="main-header__action main-header__action--search" type="button" title="Поиск"> 
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#search"></use>
+            </svg>
           </button>
-          <button class="main-header__action main-header__action--favorite" type="button">Избранное
+          <button class="main-header__action main-header__action--favorite" type="button" title="Избранное">
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#favorite"></use>
+            </svg>
           </button>
-          <button class="main-header__action main-header__action--cart" type="button">Корзина
+          <button class="main-header__action main-header__action--cart" type="button" title="Корзина">
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#cart"></use>
+            </svg>
           </button>
         </div>
         <div class="main-header__hamburger"><!-- hamburger --> 
@@ -262,23 +274,42 @@
               <ul class="side-menu__actions">
                 <li class="side-menu__action"><a class="side-menu__phone" href="tel:+78127482446">+7 (812) 748-24-46</a>
                 </li>
+                <li class="side-menu__action"><a class="side-menu__action-button side-menu__action-button--login" href="#loginModal" data-target="#loginModal" data-toggle="modal"> <span class="icon">
+                    <svg>
+                      <use xlink:href="./images/html-sprite.svg#login"></use>
+                    </svg></span>Вход</a>
+                </li>
                 <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--login" type="button">Вход
+                  <button class="side-menu__action-button side-menu__action-button--favorite" type="button"><span class="icon">
+                      <svg>
+                        <use xlink:href="./images/html-sprite.svg#favorite"></use>
+                      </svg></span>Избранное
                   </button>
                 </li>
                 <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--favorite" type="button">Избранное
-                  </button>
-                </li>
-                <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--cart" type="button">Корзина
+                  <button class="side-menu__action-button side-menu__action-button--cart" type="button"><span class="icon">
+                      <svg>
+                        <use xlink:href="./images/html-sprite.svg#cart"></use>
+                      </svg></span>Корзина
                   </button>
                 </li>
               </ul>
             </div>
           </nav><!--/ side-menu --> 
         </div>
-      </div>
+      </div><!-- search --> 
+      <div class="search">
+        <div class="inner">
+          <form class="search__form">
+            <div class="search__input-wrapper"><input class="search__input" name="search" id="search-input" placeholder="Поиск" type="text"/>
+              <button class="search__reset" type="button">
+              </button>
+            </div>
+            <label class="search__label" for="search-input">Введите запрос и нажмите Enter
+            </label>
+          </form>
+        </div>
+      </div><!--/ search --> 
     </header><!--/ main-header --> <!-- top-screen --> 
     <section class="top-screen">
       <div class="top-screen__slider">
@@ -324,7 +355,37 @@
         <h2 class="instagram-preview__title">Подписывайтесь<br> на наш Instagram
         </h2>
       </header>
-      <div class="instagram-preview__list"><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide1.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide2.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">84433</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide3.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">21311</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide4.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">55343</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide5.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide6.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">60062</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide7.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">888</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide8.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1323</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide9.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">2377</span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide10.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900</span></span></a>
+      <div class="instagram-preview__list"><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide1.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide2.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">84433<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide3.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">21311<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide4.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">55343<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide5.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide6.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">60062<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide7.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">888<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide8.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1323<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide9.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">2377<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide10.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900<span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#like"></use>
+          </svg></span></span></span></a>
       </div>
     </section><!--/ instagram-preview --> <!-- main-footer --> 
     <footer class="main-footer">
@@ -336,7 +397,19 @@
               </div>
             </div>
             <div class="main-footer__socials"><!-- socials --> 
-              <div class="socials"><a class="socials__item socials__item--instagram" href="https://instagram.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--facebook" href="https://facebook.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--vk" href="https://vk.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--twitter" href="https://www.twitter.com/" target="_blank" rel="nofollow noopener"></a>
+              <div class="socials"><a class="socials__item socials__item--instagram" href="https://instagram.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#instagram"></use>
+                </svg></a><a class="socials__item socials__item--facebook" href="https://facebook.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#fb"></use>
+                </svg></a><a class="socials__item socials__item--vk" href="https://vk.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#vk"></use>
+                </svg></a><a class="socials__item socials__item--twitter" href="https://www.twitter.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#twitter"></use>
+                </svg></a>
               </div><!--/ socials --> 
             </div>
           </div>
@@ -407,7 +480,60 @@
         </div>
       </div>
     </footer><!--/ main-footer --> 
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="modal-title">Вход</h3>
+            <form class="modal-form" name="form1">
+              <div class="modal-input-row">
+                <input class="modal-input" type="email" id="login_email" name="loginEmail" placeholder="E-mail"/>
+              </div>
+              <div class="modal-input-row">
+                <input class="modal-input" type="password" id="login_password" name="loginPassword" required="" placeholder="Пароль"/>
+              </div>
+              <button class="modal-submit" type="submit" name="submit">Войти</button>
+              <div class="modal-input-row columns">
+                <div class="modal-checkbox">
+                  <input type="checkbox" name="loginRemember" id="login-remember"/>
+                  <label for="login-remember">Запомнить меня</label>
+                </div><a class="forgot" href="#">Забыли пароль?</a>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>Первый раз на нашем сайте? Зарегистрируйтесь прямо сейчас!</p><a href="#">Регистрация</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="modal-title">Оставьте Ваш номер, мы Вам перезвоним!
+            </h3>
+            <form class="modal-form" name="callbackModal">
+              <div class="modal-input-row">
+                <input class="modal-input" type="text" id="callback-name" name="callbackName" placeholder="Ваше имя"/>
+              </div>
+              <div class="modal-input-row">
+                <input class="modal-input" id="callback-phone" name="callbackPhone" data-inputmask="'mask': '+7 (999) 999 99 99'" required="" placeholder="Ваш телефон"/>
+              </div>
+              <button class="modal-submit" type="submit" name="submit">Заказать звонок</button>
+              <div class="modal-legal">Нажимая на кнопку «Заказать звонок», вы даете согласие на обработку персональных данных и соглашаетесь c <a href='#'>политикой конфиденциальности</a>. </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/vendor.js?759a943295"></script>
-    <script src="js/main.js?563b583296"></script>
+    <script src="js/main.js?119beeac18"></script>
   </body>
 </html>

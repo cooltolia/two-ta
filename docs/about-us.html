@@ -94,7 +94,7 @@
               </li>
               <li class="main-nav__top-menu-item"><a class="main-nav__top-menu-link" href="/about">О нас</a>
               </li>
-              <li class="main-nav__top-menu-item"><a class="main-nav__top-menu-link has-subnav" href="/terms">Условия</a>
+              <li class="main-nav__top-menu-item small"><a class="main-nav__top-menu-link has-subnav" href="/terms">Условия</a>
                 <ul class="main-nav__second-menu small">
                   <li class="main-nav__second-menu-item"><a class="main-nav__second-menu-link" href="/terms">Гарантии</a>
                   </li>
@@ -118,14 +118,26 @@
           </nav><!--/ main-nav --> 
         </div><a class="main-header__logo" href="/">
         <picture>
-          <source srcset="images/logo.png" media="(min-width: 769px)"/><img src="images/logo_m.png" alt="TWO-TA логотип"/>
-        </picture></a><a class="main-header__phone">+7 (812) 748-24-46</a><a class="main-header__login" href="#loginModal" data-target="#loginModal" data-toggle="modal">Вход</a>
+          <source srcset="images/logo.svg" media="(min-width: 769px)"/><img src="images/logo_m.svg" alt="TWO-TA логотип"/>
+        </picture></a><a class="main-header__phone" href="#callbackModal" data-target="#callbackModal" data-toggle="modal">+7 (812) 748-24-46</a><a class="main-header__login" href="#loginModal" data-target="#loginModal" data-toggle="modal"> <span class="icon">
+          <svg>
+            <use xlink:href="./images/html-sprite.svg#login"></use>
+          </svg></span>Вход</a>
         <div class="main-header__actions">
-          <button class="main-header__action main-header__action--search" type="button">Поиск
+          <button class="main-header__action main-header__action--search" type="button" title="Поиск"> 
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#search"></use>
+            </svg>
           </button>
-          <button class="main-header__action main-header__action--favorite" type="button">Избранное
+          <button class="main-header__action main-header__action--favorite" type="button" title="Избранное">
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#favorite"></use>
+            </svg>
           </button>
-          <button class="main-header__action main-header__action--cart" type="button">Корзина
+          <button class="main-header__action main-header__action--cart" type="button" title="Корзина">
+            <svg>
+              <use xlink:href="./images/html-sprite.svg#cart"></use>
+            </svg>
           </button>
         </div>
         <div class="main-header__hamburger"><!-- hamburger --> 
@@ -262,23 +274,42 @@
               <ul class="side-menu__actions">
                 <li class="side-menu__action"><a class="side-menu__phone" href="tel:+78127482446">+7 (812) 748-24-46</a>
                 </li>
+                <li class="side-menu__action"><a class="side-menu__action-button side-menu__action-button--login" href="#loginModal" data-target="#loginModal" data-toggle="modal"> <span class="icon">
+                    <svg>
+                      <use xlink:href="./images/html-sprite.svg#login"></use>
+                    </svg></span>Вход</a>
+                </li>
                 <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--login" type="button">Вход
+                  <button class="side-menu__action-button side-menu__action-button--favorite" type="button"><span class="icon">
+                      <svg>
+                        <use xlink:href="./images/html-sprite.svg#favorite"></use>
+                      </svg></span>Избранное
                   </button>
                 </li>
                 <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--favorite" type="button">Избранное
-                  </button>
-                </li>
-                <li class="side-menu__action">
-                  <button class="side-menu__action-button side-menu__action-button--cart" type="button">Корзина
+                  <button class="side-menu__action-button side-menu__action-button--cart" type="button"><span class="icon">
+                      <svg>
+                        <use xlink:href="./images/html-sprite.svg#cart"></use>
+                      </svg></span>Корзина
                   </button>
                 </li>
               </ul>
             </div>
           </nav><!--/ side-menu --> 
         </div>
-      </div>
+      </div><!-- search --> 
+      <div class="search">
+        <div class="inner">
+          <form class="search__form">
+            <div class="search__input-wrapper"><input class="search__input" name="search" id="search-input" placeholder="Поиск" type="text"/>
+              <button class="search__reset" type="button">
+              </button>
+            </div>
+            <label class="search__label" for="search-input">Введите запрос и нажмите Enter
+            </label>
+          </form>
+        </div>
+      </div><!--/ search --> 
     </header><!--/ main-header --> <!-- about --> 
     <section class="about">
       <div class="about__header">
@@ -393,7 +424,19 @@
               </div>
             </div>
             <div class="main-footer__socials"><!-- socials --> 
-              <div class="socials"><a class="socials__item socials__item--instagram" href="https://instagram.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--facebook" href="https://facebook.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--vk" href="https://vk.com/" target="_blank" rel="nofollow noopener"></a><a class="socials__item socials__item--twitter" href="https://www.twitter.com/" target="_blank" rel="nofollow noopener"></a>
+              <div class="socials"><a class="socials__item socials__item--instagram" href="https://instagram.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#instagram"></use>
+                </svg></a><a class="socials__item socials__item--facebook" href="https://facebook.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#fb"></use>
+                </svg></a><a class="socials__item socials__item--vk" href="https://vk.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#vk"></use>
+                </svg></a><a class="socials__item socials__item--twitter" href="https://www.twitter.com/" target="_blank" rel="nofollow noopener">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#twitter"></use>
+                </svg></a>
               </div><!--/ socials --> 
             </div>
           </div>

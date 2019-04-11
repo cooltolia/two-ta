@@ -8,3 +8,5 @@ mixin instagram-preview()
                 +e.A.item(href='https://www.instagram.com/twota/?hl=ru' style='background-image: url(' + item.image + ')')
                     +e.likes
                         +e.SPAN.likes-value= item.likes
+                            span.icon
+                                +icon('like')

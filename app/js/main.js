@@ -426,6 +426,20 @@ jQuery(document).ready(function($) {
 
     
 
+        var searchReset = $('.search__reset');
+
+        var searchInput = $('.search__input');
+
+    
+
+        searchReset.on('click', function() {
+
+            searchInput.val('')
+
+        });
+
+    
+
         searchTrigger.on('click', function() {
 
             if (search.hasClass('active')) {

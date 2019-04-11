@@ -6,6 +6,8 @@
 
 .layout-select__option {
     position: relative;
+    flex: 0 0 auto;
+    height: 30px;
     margin-left: 10px;
     padding: 0;
     background: none;
@@ -17,9 +19,9 @@
     }
 
     svg {
-        display: block;
         width: auto;
-        height: auto;
+        height: 100%;
+        fill: #b3b3b3;
 
         transition: fill 300ms ease;
     }

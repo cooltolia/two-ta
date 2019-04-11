@@ -74,7 +74,6 @@
             opacity: 1;
         }
     }
-
 }
 
 .side-menu__top-menu {
@@ -133,7 +132,7 @@
 
     &:last-child {
         margin-bottom: 0;
-    }   
+    }
 }
 
 .side-menu__top-menu-link,
@@ -164,7 +163,7 @@
 
 .side-menu__third-menu-link {
     display: block;
-    
+
     text-decoration: none;
     color: $text-color-l;
 
@@ -239,7 +238,7 @@
     display: block;
     color: $text-color;
     text-decoration: none;
-    
+
     transition: color 300ms ease;
 
     &:hover,
@@ -268,9 +267,13 @@
     &:focus {
         color: $themecolor;
         text-decoration: none;
+
+        .icon svg {
+            fill: $themecolor;
+        }
     }
 
-    &::before {
+    .icon {
         content: '';
         position: absolute;
         width: 15px;
@@ -279,20 +282,12 @@
         top: 50%;
         transform: translateY(-50%);
 
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+        svg {
+            @include svg-icon;
 
-    &--login::before {
-        background-image: url('../images/login.png');
-    }
+            fill: $text-color;
 
-    &--favorite::before {
-        background-image: url('../images/favorite.png');
+            transition: fill 300ms ease;
+        }
     }
-
-    &--cart::before {
-        background-image: url('../images/cart.png');
-    } 
 }

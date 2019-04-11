@@ -119,8 +119,7 @@
     font-weight: 700;
     letter-spacing: 0.4px;
 
-    &::before {
-        content: '';
+    .icon {
         position: absolute;
         width: 18px;
         height: 16px;
@@ -128,7 +127,11 @@
         top: 50%;
         transform: translateY(-50%);
 
-        background-image: url('../images/like.png');
+        svg {
+            @include svg-icon;
+
+            fill: #fff;
+        }
     }
 }
 

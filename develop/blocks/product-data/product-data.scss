@@ -56,26 +56,33 @@
 
     transition: color 300ms ease;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-
-        background-image: url('../images/favorite.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
     &:hover,
     &:active,
     &:focus {
         color: $themecolor;
         text-decoration: none;
+
+        .icon svg {
+            fill: $themecolor;
+        }
+    }
+
+    .icon {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        svg {
+            @include svg-icon;
+
+            fill: $text-color;
+
+            transition: fill 300ms ease;
+        }
     }
 }
 
@@ -163,34 +170,19 @@
     position: relative;
     padding-left: 45px;
     margin-bottom: 20px;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 30px;
-        height: 35px;
-        left: 0;
-        top: 5px;
+.product-data__details-icon {
+    position: absolute;
+    width: 35px;
+    height: 42px;
+    left: 0;
+    top: 2px;
 
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top center;
-    }
+    svg {
+        @include svg-icon;
 
-    &--weight::before {
-        background-image: url('../images/weight.png');
-    }
-
-    &--material::before {
-        background-image: url('../images/material.png');
-    }
-
-    &--service::before {
-        background-image: url('../images/service.png');
-    }
-
-    &:last-child {
-        margin-bottom: 0;
+        fill: $text-color-d;
     }
 }
 
