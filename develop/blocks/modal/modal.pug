@@ -1,26 +1,45 @@
 mixin modal()
-    #loginModal.modal.fade(tabindex='-1', role='dialog')
+    #authorizationModal.modal.fade(tabindex='-1', role='dialog')
         .modal-dialog(role='document')
             .modal-content
                 .modal-header
                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                         span(aria-hidden='true') ×
-                .modal-body
-                    h3.modal-title Вход
-                    form.modal-form(name='form1')
-                        .modal-input-row
-                            input.modal-input(type='email' id='login_email' name='loginEmail' placeholder='E-mail')
-                        .modal-input-row
-                            input.modal-input(type='password' id='login_password' name='loginPassword' required='' placeholder='Пароль')
-                        button.modal-submit(type='submit' name='submit') Войти
-                        .modal-input-row.columns
-                            .modal-checkbox
-                                input(type='checkbox' name='loginRemember' id='login-remember')
-                                label(for='login-remember') Запомнить меня
-                            a.forgot(href='#') Забыли пароль?
-                .modal-footer
-                    p Первый раз на нашем сайте? Зарегистрируйтесь прямо сейчас!
-                    a(href='#') Регистрация
+                #loginModal
+                    .modal-body
+                        h3.modal-title Вход
+                        form.modal-form(name='login')
+                            .modal-input-row
+                                input.modal-input(type='email' id='login_email' name='loginEmail' placeholder='E-mail' required='')
+                            .modal-input-row
+                                input.modal-input(type='password' id='login_password' name='loginPassword' required='' placeholder='Пароль')
+                            button.modal-submit(type='submit' name='submit') Войти
+                            .modal-input-row.columns
+                                .modal-checkbox
+                                    input(type='checkbox' name='loginRemember' id='login-remember')
+                                    label(for='login-remember') Запомнить меня
+                                a.forgot(href='#') Забыли пароль?
+                    .modal-footer
+                        p Первый раз на нашем сайте? Зарегистрируйтесь прямо сейчас!
+                        a.change-modal(href='#') Регистрация
+                #signupModal
+                    .modal-body
+                        h3.modal-title Регистрация
+                        form.modal-form(name='signup')
+                            .modal-input-row
+                                input.modal-input(type='name' id='signup_name' name='signupName' placeholder='Имя')
+                            .modal-input-row
+                                input.modal-input(type='surname' id='signup_surname' name='signupSurname' placeholder='Фамилия')
+                            .modal-input-row
+                                input.modal-input(type='email' id='signup_email' name='signupEmail' placeholder='E-mail' required='')
+                            .modal-input-row
+                                input.modal-input(type='password' id='signup_password1' name='signupPassword1' required='' placeholder='Пароль')
+                            .modal-input-row
+                                input.modal-input(type='password' id='signup_password2' name='signupPassword2' required='' placeholder='Повторите пароль')
+                            button.modal-submit(type='submit' name='submit') Зарегистрироваться
+                    .modal-footer
+                        p Уже зарегистрированы? Авторизуйтесь прямо сейчас!
+                        a.change-modal(href='#') Войти
     #callbackModal.modal.fade(tabindex='-1', role='dialog')
         .modal-dialog(role='document')
             .modal-content

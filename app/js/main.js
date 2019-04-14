@@ -428,13 +428,23 @@ jQuery(document).ready(function($) {
 
         var searchReset = $('.search__reset');
 
+        var searchClose = $('.search__close');
+
         var searchInput = $('.search__input');
 
     
 
         searchReset.on('click', function() {
 
-            searchInput.val('')
+            searchInput.val('');
+
+        });
+
+    
+
+        searchClose.on('click', function() {
+
+            search.removeClass('active');
 
         });
 
@@ -506,31 +516,13 @@ jQuery(document).ready(function($) {
     
 
     
-    ;(function() {
-
-        
-
-    })()
+    
 
     
     
 
     
-    ;
-
-    (function () {
-
-    
-
-        // $(":input").inputmask();
-
-    
-
-        var $modals = $('.modal');
-
-    
-
-    
+    (function() {
 
         /**
 
@@ -538,7 +530,7 @@ jQuery(document).ready(function($) {
 
          */
 
-        $('.modal').on("hidden.bs.modal", function (e) {
+        $('.modal').on('hidden.bs.modal', function(e) {
 
             if ($('.modal:visible').length) {
 
@@ -546,7 +538,7 @@ jQuery(document).ready(function($) {
 
             } else {
 
-                $('body').css('padding-right', '0px')
+                $('body').css('padding-right', '0px');
 
             }
 
@@ -554,143 +546,35 @@ jQuery(document).ready(function($) {
 
     
 
-        $modals.each(function () {
+        var loginModal = $('#loginModal');
 
-            $(this).on("shown.bs.modal", function (event) {
+        var signupModal = $('#signupModal');
 
-    
+        var triggerLoginModal = signupModal.find('.change-modal');
 
-                var xhr = new XMLHttpRequest();
-
-    
-
-                var currentModal = $(this);
-
-                var currentForm = $(this).find('form');
-
-                var formName = currentForm.attr('name');
+        var triggerSignupModal = loginModal.find('.change-modal');
 
     
 
-                var firstInput = $(this).find('input')[0];
+        triggerLoginModal.on('click', function() {
 
-                if (firstInput) {
+            signupModal.hide()
 
-                    firstInput.focus()
-
-                }
-
-    
-
-                var mobileInput = $(this).find('input[name="phone"]');
-
-                var submit = $(this).find('button[name="submit"]');
-
-                var isValid = Inputmask.isValid(mobileInput.val(), {
-
-                    inputFormat: "+7 (999) 999 99 99"
-
-                });
-
-    
-
-                if (isValid) {
-
-                    submit.attr('disabled', false)
-
-                }
-
-    
-
-                mobileInput.inputmask('+7 (999) 999 99 99', {
-
-                    oncomplete: function () {
-
-                        submit.attr('disabled', false)
-
-                    },
-
-                    onincomplete: function () {
-
-                        submit.prop('disabled', true)
-
-                    }
-
-                });
-
-    
-
-                currentForm.on('submit', function (e) {
-
-                    e.preventDefault();
-
-    
-
-                    xhr.onreadystatechange = function () {
-
-                        if (xhr.readyState === 4) {
-
-                            mobileInput.val('');
-
-                            submit.removeClass("loading");
-
-                            submit.prop('disabled', true);
-
-    
-
-                            if (xhr.status === 200) {
-
-                                $('#success').modal();
-
-                                currentForm.off()
-
-                            } else {
-
-                                currentForm.off()
-
-                                alert("Возникла ошибка при отправке формы. Код ошибки: " + xhr.status + " " + xhr.statusText);
-
-                            }
-
-                        }
-
-                    };
-
-    
-
-                    window.dataLayer = window.dataLayer || [];
-
-                    window.dataLayer.push({
-
-                        'event': 'feedbackFormSubmit',
-
-                        'category': 'form-submit',
-
-                        'action': 'submitForm',
-
-                    });
-
-    
-
-                    currentModal.modal('hide');
-
-                    var formData = new FormData(document.forms[formName]);
-
-                    xhr.open("POST", "sendform.php", true);
-
-                    xhr.send(formData);
-
-                });
-
-            });
-
-    
+            loginModal.show();
 
         });
 
-    
+        triggerSignupModal.on('click', function() {
+
+            loginModal.hide()
+
+            signupModal.show();
+
+        });
 
     })();
+
+    
 
     
     (function() {

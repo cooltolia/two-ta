@@ -8,7 +8,7 @@ mixin main-header
                     source(srcset="images/logo.svg" media="(min-width: 769px)")
                     img(src="images/logo_m.svg" alt="TWO-TA логотип")
             +e.A.phone(href='#callbackModal' data-target='#callbackModal' data-toggle='modal') +7 (812) 748-24-46
-            +e.A.login(href='#loginModal' data-target='#loginModal' data-toggle='modal') 
+            +e.A.login(href='#authorizationModal' data-target='#authorizationModal' data-toggle='modal') 
                 span.icon
                     +icon('login')
                 | Вход
@@ -28,5 +28,6 @@ mixin main-header
                 +e.FORM.form
                     +e.input-wrapper
                         +e.INPUT.input(name='search', id='search-input' placeholder='Поиск')
-                        +e.BUTTON.reset(type='button')
+                        //- +e.BUTTON.reset(type='button')
+                        +e.BUTTON.close(type='button')
                     +e.LABEL.label(for='search-input') Введите запрос и нажмите Enter

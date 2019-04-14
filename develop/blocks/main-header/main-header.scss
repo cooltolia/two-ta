@@ -126,6 +126,8 @@
 
     transition: transform 300ms ease;
 
+    border-bottom: 1px solid #e6e6e6;
+
     &.active {
         transform: translateY(0);
     }
@@ -144,7 +146,8 @@
     align-items: center;
 }
 
-.search__reset {
+.search__reset,
+.search__close {
     width: 20px;
     height: 20px;
     position: absolute;
@@ -205,6 +208,12 @@
 
     &::placeholder {
         color: $text-color-d;
+
+        transition: opacity 150ms ease;
+    }
+
+    &:focus::placeholder {
+        opacity: 0;
     }
 }
 
@@ -291,6 +300,8 @@
         font-weight: 400;
         text-decoration: none;
         letter-spacing: 0.7px;
+
+        transition: color 300ms ease;
 
         .icon {
             position: absolute;

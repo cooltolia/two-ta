@@ -20,6 +20,8 @@ $text-color-l: #808080;
 $light-text: #ffffff;
 
 @mixin btn-theme($themecolor: $themecolor) {
+    $reversecolor: if($themecolor == #e9444d, #000000, #e9444d);
+
     position: relative;
     display: flex;
     justify-content: center;
@@ -43,8 +45,9 @@ $light-text: #ffffff;
     &:active,
     &:focus {
         text-decoration: none;
-        color: $themecolor;
-        background-color: transparent;
+        color: #fff;
+        background-color: $reversecolor;
+        border-color: $reversecolor;
     }
 
 }

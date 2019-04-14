@@ -26,6 +26,10 @@
     margin: 0 auto;
 }
 
+#signupModal {
+    display: none;
+}
+
 .modal-header {
     padding: 0;
     border: none;
@@ -71,7 +75,7 @@
     line-height: 1.5;
 }
 
-#loginModal .modal-title {
+#authorizationModal .modal-title {
     font-family: $sansation;
     font-size: 18px;
     font-weight: 300;

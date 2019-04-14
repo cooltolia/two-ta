@@ -5,10 +5,15 @@
     var search = $('.search');
 
     var searchReset = $('.search__reset');
+    var searchClose = $('.search__close');
     var searchInput = $('.search__input');
 
     searchReset.on('click', function() {
-        searchInput.val('')
+        searchInput.val('');
+    });
+
+    searchClose.on('click', function() {
+        search.removeClass('active');
     });
 
     searchTrigger.on('click', function() {
