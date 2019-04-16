@@ -821,10 +821,13 @@ th {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
-  text-decoration: none; }
-  .contacts__block-title:hover, .contacts__block-title:focus, .contacts__block-title:active {
+  text-decoration: none;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  transition: color 300ms ease; }
+  .contacts__block-title--link:hover, .contacts__block-title--link:focus, .contacts__block-title--link:active {
     text-decoration: none;
-    color: #000000; }
+    color: #e9444d; }
 
 .contacts__block-info {
   color: #808080;
@@ -1058,6 +1061,7 @@ th {
   background-color: #000;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #000;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -1237,6 +1241,7 @@ th {
   background-color: transparent;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #e9444d;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -1944,11 +1949,6 @@ th {
   .main-nav__top-menu-link:hover, .main-nav__top-menu-link:focus, .main-nav__top-menu-link:active, .main-nav__top-menu-link.current {
     color: #e9444d;
     text-decoration: none; }
-  .main-nav__top-menu-link:hover + .main-nav__second-menu, .main-nav__top-menu-link:active + .main-nav__second-menu {
-    -webkit-transform: translateY(0);
-       -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0); }
 
 .main-nav__second-menu {
   position: absolute;
@@ -2002,7 +2002,7 @@ th {
       .main-nav__second-menu.small .main-nav__second-menu-link:hover, .main-nav__second-menu.small .main-nav__second-menu-link:active, .main-nav__second-menu.small .main-nav__second-menu-link:focus {
         text-decoration: none;
         color: #e9444d; }
-  .main-nav__second-menu:hover {
+  .main-nav__second-menu:hover, .main-nav__second-menu:focus {
     -webkit-transform: translateY(0);
        -moz-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -2102,6 +2102,7 @@ th {
   background-color: #000;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #000;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -2137,6 +2138,7 @@ th {
     background-color: #e9444d;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid #e9444d;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -2440,7 +2442,11 @@ a.forgot {
   background-color: #fff;
   color: #1a1a1a;
   font-size: 14px;
-  font-weight: 400; }
+  font-weight: 400;
+  outline: none;
+  -webkit-transition: border 300ms ease;
+  -moz-transition: border 300ms ease;
+  transition: border 300ms ease; }
   .modal-input::-webkit-input-placeholder {
     color: #999999;
     letter-spacing: 0.35px; }
@@ -2450,6 +2456,8 @@ a.forgot {
   .modal-input::placeholder {
     color: #999999;
     letter-spacing: 0.35px; }
+  .modal-input:focus {
+    border-color: #000000; }
 
 .modal-submit {
   position: relative;
@@ -2474,6 +2482,7 @@ a.forgot {
   background-color: #000;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #000;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -2533,6 +2542,7 @@ a.forgot {
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid #000;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -2903,6 +2913,7 @@ body.modal-open {
   background-color: #e9444d;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #e9444d;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -2937,6 +2948,7 @@ body.modal-open {
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid #e9444d;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -2969,6 +2981,7 @@ body.modal-open {
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid #000000;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -4031,6 +4044,10 @@ body.modal-open {
     .terms-content p b {
       color: #000000;
       font-weight: 400; }
+      .terms-content p b a {
+        text-decoration: none; }
+        .terms-content p b a:hover, .terms-content p b a:focus, .terms-content p b a:active {
+          text-decoration: none; }
   .terms-content ul {
     padding: 0;
     margin: 0;
@@ -4161,7 +4178,7 @@ body.modal-open {
     width: auto;
     max-width: 230px;
     left: 10%;
-    top: 155px;
+    top: 145px;
     padding: 0;
     border: none; }
   .terms__content {
@@ -4243,6 +4260,7 @@ body.modal-open {
   background-color: #e9444d;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   border: 2px solid #e9444d;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;

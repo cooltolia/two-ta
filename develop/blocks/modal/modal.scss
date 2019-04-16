@@ -188,9 +188,17 @@ a.forgot {
     font-size: 14px;
     font-weight: 400;
 
+    outline: none;
+
+    transition: border 300ms ease;
+
     &::placeholder {
         color: #999999;
         letter-spacing: 0.35px;
+    }
+
+    &:focus {
+        border-color: $text-color-d;
     }
 }
 

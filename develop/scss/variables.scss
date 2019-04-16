@@ -37,6 +37,7 @@ $light-text: #ffffff;
     background-color: $themecolor;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid $themecolor;
 
     transition: all 300ms ease;
@@ -68,6 +69,7 @@ $light-text: #ffffff;
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: none;
     border: 2px solid $themecolor;
 
     transition: all 300ms ease;

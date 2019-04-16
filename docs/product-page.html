@@ -302,7 +302,7 @@
         <div class="inner">
           <form class="search__form">
             <div class="search__input-wrapper"><input class="search__input" name="search" id="search-input" placeholder="Поиск" type="text"/>
-              <button class="search__reset" type="button">
+              <button class="search__close" type="button">
               </button>
             </div>
             <label class="search__label" for="search-input">Введите запрос и нажмите Enter
@@ -649,26 +649,54 @@
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
           </div>
-          <div class="modal-body">
-            <h3 class="modal-title">Вход</h3>
-            <form class="modal-form" name="form1">
-              <div class="modal-input-row">
-                <input class="modal-input" type="email" id="login_email" name="loginEmail" placeholder="E-mail"/>
-              </div>
-              <div class="modal-input-row">
-                <input class="modal-input" type="password" id="login_password" name="loginPassword" required="" placeholder="Пароль"/>
-              </div>
-              <button class="modal-submit" type="submit" name="submit">Войти</button>
-              <div class="modal-input-row columns">
-                <div class="modal-checkbox">
-                  <input type="checkbox" name="loginRemember" id="login-remember"/>
-                  <label for="login-remember">Запомнить меня</label>
-                </div><a class="forgot" href="#">Забыли пароль?</a>
-              </div>
-            </form>
+          <div id="loginModal">
+            <div class="modal-body">
+              <h3 class="modal-title">Вход</h3>
+              <form class="modal-form" name="login">
+                <div class="modal-input-row">
+                  <input class="modal-input" type="email" id="login_email" name="loginEmail" placeholder="E-mail" required=""/>
+                </div>
+                <div class="modal-input-row">
+                  <input class="modal-input" type="password" id="login_password" name="loginPassword" required="" placeholder="Пароль"/>
+                </div>
+                <button class="modal-submit" type="submit" name="submit">Войти</button>
+                <div class="modal-input-row columns">
+                  <div class="modal-checkbox">
+                    <input type="checkbox" name="loginRemember" id="login-remember"/>
+                    <label for="login-remember">Запомнить меня</label>
+                  </div><a class="forgot" href="#">Забыли пароль?</a>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>Первый раз на нашем сайте? Зарегистрируйтесь прямо сейчас!</p><a class="change-modal" href="#">Регистрация</a>
+            </div>
           </div>
-          <div class="modal-footer">
-            <p>Первый раз на нашем сайте? Зарегистрируйтесь прямо сейчас!</p><a href="#">Регистрация</a>
+          <div id="signupModal">
+            <div class="modal-body">
+              <h3 class="modal-title">Регистрация</h3>
+              <form class="modal-form" name="signup">
+                <div class="modal-input-row">
+                  <input class="modal-input" type="name" id="signup_name" name="signupName" placeholder="Имя"/>
+                </div>
+                <div class="modal-input-row">
+                  <input class="modal-input" type="surname" id="signup_surname" name="signupSurname" placeholder="Фамилия"/>
+                </div>
+                <div class="modal-input-row">
+                  <input class="modal-input" type="email" id="signup_email" name="signupEmail" placeholder="E-mail" required=""/>
+                </div>
+                <div class="modal-input-row">
+                  <input class="modal-input" type="password" id="signup_password1" name="signupPassword1" required="" placeholder="Пароль"/>
+                </div>
+                <div class="modal-input-row">
+                  <input class="modal-input" type="password" id="signup_password2" name="signupPassword2" required="" placeholder="Повторите пароль"/>
+                </div>
+                <button class="modal-submit" type="submit" name="submit">Зарегистрироваться</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>Уже зарегистрированы? Авторизуйтесь прямо сейчас!</p><a class="change-modal" href="#">Войти</a>
+            </div>
           </div>
         </div>
       </div>

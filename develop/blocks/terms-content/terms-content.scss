@@ -1,4 +1,4 @@
-.terms-content {
+    .terms-content {
     font-family: $opsans;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -49,6 +49,16 @@
         b {
             color: $text-color-d;
             font-weight: 400;
+
+            a {
+                text-decoration: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                }
+            }
         }
     }
 

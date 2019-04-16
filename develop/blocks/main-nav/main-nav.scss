@@ -49,9 +49,9 @@
     }
 
     &:hover,
-    &:active {
+    &:focus {
         + .main-nav__second-menu {
-            transform: translateY(0);
+                                                      
         }
     }
 }
@@ -113,7 +113,8 @@
         }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: translateY(0);
     }
 }
