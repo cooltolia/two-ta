@@ -5,6 +5,9 @@ jQuery(document).ready(function($) {
     
 
     
+    
+
+    
     (function() {
 
         var filter = $('.catalog__filter');
@@ -426,6 +429,54 @@ jQuery(document).ready(function($) {
 
     
 
+        var cartPreviewTrigger = $('.main-header__action--cart');
+
+        var cartPreview = $('.cart-preview');
+
+        var cartPreviewClose = $('.cart-preview__close');
+
+    
+
+        var cartPreviewProductRemove = $('.cart-preview__product-remove');
+
+    
+
+        cartPreviewProductRemove.on('click', function() {
+
+            var _this = $(this);
+
+            var product = _this.parent();
+
+            product.addClass('js-removed')
+
+    
+
+            setTimeout(function() {
+
+                product.slideUp();
+
+            }, 500)
+
+        })
+
+    
+
+        cartPreviewTrigger.on('click', function() {
+
+            cartPreview.toggleClass('js-active');
+
+        });
+
+    
+
+        cartPreviewClose.on('click', function() {
+
+            cartPreview.removeClass('js-active');
+
+        })
+
+    
+
         var searchReset = $('.search__reset');
 
         var searchClose = $('.search__close');
@@ -490,19 +541,11 @@ jQuery(document).ready(function($) {
 
                 hiddenMenu.addClass('shifted');
 
-                // var headerHeight = header.outerHeight();
-
-                // hiddenMenu.css('top', headerHeight + 'px');
-
             } else {
 
                 header.removeClass('minimized');
 
                 hiddenMenu.removeClass('shifted');
-
-                // var headerHeight = header.outerHeight();
-
-                // hiddenMenu.css('top', headerHeight + 'px');
 
             }
 
@@ -663,6 +706,28 @@ jQuery(document).ready(function($) {
                 $nextData.addClass('active');
 
             });
+
+        });
+
+    
+
+        var cartButton = $('.main-header__action--cart');
+
+        var indicator = cartButton.find('.indicator');
+
+        var addToCartButton = $('.product-data .js-add-to-cart');
+
+        addToCartButton.on('click', function(e) {
+
+            e.preventDefault();
+
+    
+
+            $('#addedToCart').modal('show');
+
+    
+
+            indicator.addClass('js-active');
 
         });
 

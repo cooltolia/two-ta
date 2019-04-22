@@ -35,4 +35,15 @@
             $nextData.addClass('active');
         });
     });
+
+    var cartButton = $('.main-header__action--cart');
+    var indicator = cartButton.find('.indicator');
+    var addToCartButton = $('.product-data .js-add-to-cart');
+    addToCartButton.on('click', function(e) {
+        e.preventDefault();
+
+        $('#addedToCart').modal('show');
+
+        indicator.addClass('js-active');
+    });
 })();

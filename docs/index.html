@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
     <link rel="stylesheet" href="css/vendor.css?2d4f790065">
-    <link rel="stylesheet" href="css/main.css?53e27b568a">
+    <link rel="stylesheet" href="css/main.css?10d9664c38">
     <!--[if lte IE 9]>
     <script src="libs/ie/html5shiv.js"></script>
     <script src="libs/ie/respond.src.js"></script>
@@ -137,8 +137,72 @@
           <button class="main-header__action main-header__action--cart" type="button" title="Корзина">
             <svg>
               <use xlink:href="./images/html-sprite.svg#cart"></use>
-            </svg>
-          </button>
+            </svg><span class="indicator"></span>
+          </button><!-- cart-preview --> 
+          <div class="cart-preview">
+            <div class="cart-preview__header">
+              <h3 class="cart-preview__title">Корзина
+              </h3>
+              <button class="cart-preview__close">
+                <svg>
+                  <use xlink:href="./images/html-sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cart-preview__products">
+              <div class="cart-preview__product">
+                <div class="cart-preview__product-image"><img src="images/cart-preview/product1.jpg" alt=""/>
+                </div>
+                <div class="cart-preview__product-content">
+                  <div class="cart-preview__product-title">Подарочная карта&nbsp;(1000 р.)
+                  </div>
+                  <div class="cart-preview__product-price">1000 руб.
+                  </div>
+                </div>
+                <button class="cart-preview__product-remove">
+                  <svg>
+                    <use xlink:href="./images/html-sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="cart-preview__product">
+                <div class="cart-preview__product-image"><img src="images/cart-preview/product2.jpg" alt=""/>
+                </div>
+                <div class="cart-preview__product-content">
+                  <div class="cart-preview__product-title">VICKY
+                  </div>
+                  <div class="cart-preview__product-price">5600 руб.
+                  </div>
+                </div>
+                <button class="cart-preview__product-remove">
+                  <svg>
+                    <use xlink:href="./images/html-sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="cart-preview__product">
+                <div class="cart-preview__product-image"><img src="images/cart-preview/product1.jpg" alt=""/>
+                </div>
+                <div class="cart-preview__product-content">
+                  <div class="cart-preview__product-title">MARLA MINI
+                  </div>
+                  <div class="cart-preview__product-price">6900 руб.
+                  </div>
+                </div>
+                <button class="cart-preview__product-remove">
+                  <svg>
+                    <use xlink:href="./images/html-sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-preview__footer">
+              <div class="cart-preview__result"><span class="cart-preview__result-label">Итого</span><span class="cart-preview__result-sum">13500 руб.</span>
+              </div>
+              <div class="cart-preview__actions"><a class="cart-preview__action cart-preview__action--transparent js-clear" href="#">Очистить</a><a class="cart-preview__action cart-preview__action--dark" href="#">Оформить</a>
+              </div>
+            </div>
+          </div><!--/ cart-preview --> 
         </div>
         <div class="main-header__hamburger"><!-- hamburger --> 
           <div class="hamburger">
@@ -561,7 +625,20 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="addedToCart" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="modal-title">Товар успешно добавлен в корзину
+            </h3><a class="modal-link modal-link--transparent" href="#" data-dismiss="modal">Продолжить покупки</a><a class="modal-link modal-link--dark" href="#">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/vendor.js?9b5faa208f"></script>
-    <script src="js/main.js?224e6406a9"></script>
+    <script src="js/main.js?6a2d377bcb"></script>
   </body>
 </html>

@@ -1,0 +1,38 @@
+mixin cart-preview()
+    +b.cart-preview
+        +e.header
+            +e.H3.title Корзина
+            +e.BUTTON.close
+                +icon('close')
+        +e.products
+            +e.product
+                +e.product-image
+                    img(src="images/cart-preview/product1.jpg", alt="")
+                +e.product-content
+                    +e.product-title Подарочная карта&nbsp;(1000 р.)
+                    +e.product-price 1000 руб.
+                +e.BUTTON.product-remove
+                    +icon('close')
+            +e.product
+                +e.product-image
+                    img(src="images/cart-preview/product2.jpg", alt="")
+                +e.product-content
+                    +e.product-title VICKY
+                    +e.product-price 5600 руб.
+                +e.BUTTON.product-remove
+                    +icon('close')
+            +e.product
+                +e.product-image
+                    img(src="images/cart-preview/product1.jpg", alt="")
+                +e.product-content
+                    +e.product-title MARLA MINI
+                    +e.product-price 6900 руб.
+                +e.BUTTON.product-remove
+                    +icon('close')
+        +e.footer
+            +e.result
+                +e.SPAN.result-label Итого
+                +e.SPAN.result-sum 13500 руб.
+            +e.actions
+                +e.A.action.--transparent.js-clear(href='#') Очистить
+                +e.A.action.--dark(href='#') Оформить

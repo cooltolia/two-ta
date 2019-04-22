@@ -30,18 +30,19 @@
 }
 
 .product-data__button {
-    @include btn-theme();
     display: inline-block;
     padding: 12px 20px;
 
+    &--basic {
+        @include btn-theme;
+    }
+
     &--transparent {
         @include btn-transparent;
-        display: inline-block;
     }
 
     &--dark {
         @include btn-transparent($text-color-d);
-        display: inline-block;
     }
 }
 

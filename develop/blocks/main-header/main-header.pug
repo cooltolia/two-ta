@@ -19,6 +19,8 @@ mixin main-header
                     +icon('favorite')
                 +e.BUTTON.action.--cart(type='button' title='Корзина')
                     +icon('cart')
+                    span.indicator
+                +cart-preview
             +e.hamburger
                 +hamburger
             +e.side-menu

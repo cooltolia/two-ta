@@ -82,6 +82,15 @@
     text-transform: uppercase;
 }
 
+#addedToCart .modal-title {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+#addedToCart .close {
+    display: none;
+}
+
 .modal-input-row {
     margin-bottom: 15px;
 
@@ -225,6 +234,24 @@ a.forgot {
         &:active {
             color: $themecolor;
         }
+    }
+}
+
+.modal-link {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 20px;
+
+    &--transparent {
+        @include btn-transparent(black);
+    }
+
+    &--dark {
+        @include btn-theme(black);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 

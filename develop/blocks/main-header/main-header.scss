@@ -83,7 +83,27 @@
     border: none;
     font-size: 0;
 
-    // TODO change for svg
+    &--cart {
+        .indicator {
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            top: -3px;
+            right: -3px;
+
+            background-color: $themecolor;
+            border-radius: 50%;
+
+            opacity: 0;
+
+            &.js-active {
+                animation-name: bubbling;
+                animation-duration: 500ms;
+
+                opacity: 1;
+            }
+        }
+    }
 
     &:last-child {
         margin-right: 0;
@@ -106,6 +126,19 @@
         svg {
             fill: $themecolor;
         }
+    }
+}
+
+@keyframes bubbling {
+    0% {
+        transform: scale(3);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -170,7 +203,7 @@
 
         background-color: $text-color;
         transform-origin: center;
-        
+
         transition: background-color 300ms ease;
     }
 

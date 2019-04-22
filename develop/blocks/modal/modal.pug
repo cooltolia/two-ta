@@ -58,4 +58,14 @@ mixin modal()
                         button.modal-submit(type='submit' name='submit') Заказать звонок
                         .modal-legal
                             | Нажимая на кнопку «Заказать звонок», вы даете согласие на обработку персональных данных и соглашаетесь c <a href='#'>политикой конфиденциальности</a>. 
+    #addedToCart.modal.fade(tabindex='-1', role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    +e.H3.modal-title Товар успешно добавлен в корзину
+                    +e.A.modal-link.--transparent(href='#' data-dismiss='modal') Продолжить покупки
+                    +e.A.modal-link.--dark(href='#') Оформить заказ
     
