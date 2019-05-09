@@ -10,6 +10,150 @@ jQuery(document).ready(function($) {
     
     (function() {
 
+        var cartProductRemove = $('.cart-product__remove');
+
+        var cartProductCounter = $('.cart-product__counter');
+
+        var cartSumNode = $('.cart__result-sum .value');
+
+        var cartSum = 0;
+
+    
+
+        if (cartProductRemove.length === 0) return;
+
+    
+
+        cartProductRemove.on('click', function() {
+
+            var _this = $(this);
+
+            var productWrapper = _this.parent().parent();
+
+            productWrapper.addClass('js-removed');
+
+    
+
+            var price = parseInt(
+
+                _this
+
+                    .parent()
+
+                    .find('.cart-product__price .value')
+
+                    .text()
+
+            );
+
+            var current = _this.parent().find('.current');
+
+            var currentNumber = parseInt(current.text());
+
+    
+
+            cartSum -= price * currentNumber;
+
+            cartSumNode.text(cartSum);
+
+    
+
+            setTimeout(function() {
+
+                productWrapper.slideUp();
+
+            }, 500);
+
+        });
+
+    
+
+        cartProductCounter.each(function() {
+
+            var _this = $(this);
+
+    
+
+            var plus = _this.find('.plus');
+
+            var minus = _this.find('.minus');
+
+            var current = _this.find('.current');
+
+            var currentNumber = parseInt(current.text());
+
+    
+
+            var price = parseInt(
+
+                _this
+
+                    .parent()
+
+                    .find('.cart-product__price .value')
+
+                    .text()
+
+            );
+
+    
+
+            cartSum += price * currentNumber;
+
+            cartSumNode.text(cartSum);
+
+    
+
+            plus.on('click', function() {
+
+                if (currentNumber === 99) return;
+
+                currentNumber++;
+
+    
+
+                cartSum += price;
+
+                cartSumNode.text(cartSum);
+
+    
+
+                current.text(currentNumber);
+
+            });
+
+    
+
+            minus.on('click', function() {
+
+                if (currentNumber === 1) return;
+
+                currentNumber--;
+
+    
+
+                cartSum -= price;
+
+                cartSumNode.text(cartSum);
+
+    
+
+                current.text(currentNumber);
+
+            });
+
+        });
+
+    })();
+
+    
+
+    
+    
+
+    
+    (function() {
+
         var filter = $('.catalog__filter');
 
         var products = $('.products');
@@ -56,6 +200,41 @@ jQuery(document).ready(function($) {
 
     })();
 
+    
+
+    
+    (function() {
+
+        var link = $('.checkout-form__input-info a');
+
+        if (link.length === 0) return;
+
+    
+
+        link.on("click", function(e) {
+
+            if ("#" !== $(this).attr("href")[0])
+
+                return !0;
+
+            e.preventDefault();
+
+            var target = $(this.hash);
+
+            $("html, body").animate({
+
+                scrollTop: target.offset().top - 100
+
+            }, 300)
+
+        });
+
+    })();
+
+    
+    
+
+    
     
 
     
@@ -261,6 +440,9 @@ jQuery(document).ready(function($) {
 
     })();
 
+    
+
+    
     
 
     
@@ -614,6 +796,65 @@ jQuery(document).ready(function($) {
             signupModal.show();
 
         });
+
+    })();
+
+    
+
+    
+    (function() {
+
+        var wrapper = $('.checkout__wrapper');
+
+        var wrapperHeight = wrapper.outerHeight(true);
+
+        var preview = $('.order-preview');
+
+        var previewHeight = preview.outerHeight(true);
+
+        if (wrapper.length === 0) return;
+
+    
+
+        var offset_t = wrapper.offset().top - $(window).scrollTop();
+
+        console.log(offset_t);
+
+    
+
+        if (window.matchMedia('(min-width: 769px)').matches) {
+
+    
+
+            $(document).on('scroll', function() {
+
+                var offset_t = wrapper.offset().top - $(window).scrollTop();
+
+                if (offset_t < 50) {
+
+    
+
+                    if (-offset_t > wrapperHeight - previewHeight - 100) {
+
+                        return;
+
+                    }
+
+    
+
+                    var translate = -offset_t + 100;
+
+                    preview.css('transform', 'translateY(' + translate + 'px)');
+
+                } else {
+
+                    preview.css('transform', 'translateY(' + 0 + ')');
+
+                }
+
+            });
+
+        }
 
     })();
 

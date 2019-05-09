@@ -1,0 +1,19 @@
+mixin cart-product(name, img, category, article, price, currentCounter)
+    +b.SECTION.cart-product
+        +e.image
+            img(src=img, alt="")
+        +e.content
+            +e.H2.name= name
+            +e.category= category
+            +e.article Артикул: 
+                span= article
+        +e.price 
+            span.value= price
+            |  
+            | руб.
+        +e.counter
+            button.plus(type='button') +
+            .current= currentCounter
+            button.minus(type='button') -
+        +e.BUTTON.remove(type='button')
+            +icon('close')

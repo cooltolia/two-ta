@@ -1,0 +1,48 @@
+.checkout {
+    padding: 50px 0;
+}
+
+.checkout__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    overflow: hidden;
+}
+
+.checkout__content {
+    width: 57%;
+    flex: 1 1 auto;
+    margin-right: 110px;
+}
+
+.checkout__aside {
+    position: relative;
+    width: 294px;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .checkout__content {
+        width: 63%;
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout {
+        padding: 30px 0;
+    }
+
+    .checkout__wrapper {
+        display: block;
+    }
+
+    .checkout__content {
+        width: 100%;
+        margin-right: 0;
+    } 
+
+    .checkout__aside {
+        width: 100%;
+    }
+}

@@ -1,0 +1,161 @@
+.final {
+    padding: 50px 0 300px;
+    min-height: 80vh;
+
+    font-family: $opsans;
+    color: $text-color-d;
+
+    background-image: url('../images/final/background.jpg');
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.final__header {
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ebebeb;
+}
+
+.final__heading {
+    margin: 0 0 10px;
+
+    font-family: $sansation;
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.25;
+    letter-spacing: 1.6px;
+}
+
+.final__subtitle {
+    margin: 0;
+
+    color: $text-color-m;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.final__content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.final__result {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 5px 10px 0;
+
+    font-family: $sansation;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    b {
+        font-weight: 700;
+    }
+}
+
+.final__date {
+    margin: 0;
+    display: inline-block;
+    vertical-align: baseline;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.final__info {
+    margin: 0 0 25px;
+
+    color: $text-color-m;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    a {
+        color: $text-color-d;
+        text-decoration: underline;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $themecolor;
+        }
+    }
+}
+
+.final__data {
+    display: flex;
+
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+}
+
+.final__data-cell {
+    padding: 15px 20px;
+    flex: 1 1 auto;
+
+    border-right: 1px solid #ebebeb;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.final__data-title {
+    margin-bottom: 3px;
+
+    color: $text-color-m;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.final__data-content {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .final {
+        padding: 30px 0 250px;
+
+        background-image: url('../images/final/background_s.jpg');
+    }
+
+    .final__heading {
+        font-size: 24px;
+    }
+
+    .final__result {
+        display: block;
+        margin: 0 0 5px;
+
+        font-size: 20px;
+    }
+
+    .final__date {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .final__data {
+        display: block;
+    }
+
+    .final__data-cell {
+        border-right: none;
+        border-bottom: 1px solid #ebebeb;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

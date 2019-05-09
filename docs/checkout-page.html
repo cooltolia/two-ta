@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
-    <link rel="stylesheet" href="css/vendor.css?2d4f790065">
-    <link rel="stylesheet" href="css/main.css?9250e7a3bb">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
     <!--[if lte IE 9]>
     <script src="libs/ie/html5shiv.js"></script>
     <script src="libs/ie/respond.src.js"></script>
@@ -374,84 +374,199 @@
           </form>
         </div>
       </div><!--/ search --> 
-    </header><!--/ main-header --> <!-- top-screen --> 
-    <section class="top-screen">
-      <div class="top-screen__slider">
-        <div class="top-screen__slide">
-          <div class="top-screen__content">
-            <h2 class="top-screen__title">Сумка&nbsp;&mdash; лучший новогодний подарок в&nbsp;этом году!
-            </h2><a class="top-screen__button" href="#">Выбрать подарки</a>
-          </div>
-        </div>
-        <div class="top-screen__slide">
-          <div class="top-screen__content">
-            <h2 class="top-screen__title">Сумка&nbsp;&mdash; лучший подарок на День рождения!
-            </h2><a class="top-screen__button" href="#">Выбрать подарки</a>
-          </div>
+    </header><!--/ main-header --> <!-- checkout --> 
+    <section class="checkout">
+      <div class="inner">
+        <div class="checkout__wrapper">
+          <main class="checkout__content" role="main"><!-- checkout-form --> 
+            <form class="checkout-form" method="post" action="#">
+              <div class="checkout-form__block">
+                <h2 class="checkout-form__title">Ваш город для доставки
+                </h2>
+                <p class="checkout-form__text">Мы постарались определить город автоматически! Если он указан неверно, то выберите Ваш город из списка. Если Вашего города нет в списке, то укажите любой ближайший, а название Вашего напишите в поле "Комментарий к заказу".
+                </p>
+                <div class="checkout-form__sity-select"><!-- city-select --> 
+                  <div class="city-select" id="city-select">
+                    <div class="bx-ui-slst-pool">
+                      <div class="dropdown-block bx-ui-slst-input-block disabled-keyboard"><span class="dropdown-icon"></span>
+                        <input class="dropdown-field" type="text" name="" value="" autocomplete="off" style="display: none;"/>
+                        <div class="bx-ui-combobox-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+                          <div class="bx-ui-combobox-fake bx-combobox-fake-as-input">Россия</div>
+                        </div>
+                        <div class="dropdown-fade2white"></div>
+                        <div class="bx-ui-combobox-loader" data-bx-ui-id="combobox-loader"></div>
+                        <div class="bx-ui-combobox-toggle" title="Открыть / закрыть" data-bx-ui-id="combobox-toggle"></div>
+                      </div>
+                      <div class="dropdown-block bx-ui-slst-input-block disabled-keyboard"><span class="dropdown-icon"></span>
+                        <input class="dropdown-field" type="text" name="" value="" autocomplete="off" style="display: none;"/>
+                        <div class="bx-ui-combobox-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+                          <div class="bx-ui-combobox-fake bx-combobox-fake-as-input">Северо-Запад</div>
+                        </div>
+                        <div class="dropdown-fade2white"></div>
+                        <div class="bx-ui-combobox-loader" data-bx-ui-id="combobox-loader"></div>
+                        <div class="bx-ui-combobox-toggle" title="Открыть / закрыть" data-bx-ui-id="combobox-toggle"></div>
+                      </div>
+                      <div class="dropdown-block bx-ui-slst-input-block disabled-keyboard"><span class="dropdown-icon"></span>
+                        <input class="dropdown-field" type="text" name="" value="" autocomplete="off" style="display: none;"/>
+                        <div class="bx-ui-combobox-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+                          <div class="bx-ui-combobox-fake bx-combobox-fake-as-input">Санкт-Петербург</div>
+                        </div>
+                        <div class="dropdown-fade2white"></div>
+                        <div class="bx-ui-combobox-loader" data-bx-ui-id="combobox-loader"></div>
+                        <div class="bx-ui-combobox-toggle" title="Открыть / закрыть" data-bx-ui-id="combobox-toggle"></div>
+                      </div>
+                    </div>
+                  </div><!--/ city-select --> 
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <h2 class="checkout-form__title">Вариант доставки
+                </h2>
+                <div class="checkout-form__radio-input">
+                  <input type="radio" name="delivery_type" id="delivery_courier" value="courier" checked=""/>
+                  <label class="checkout-form__label checkout-form__label--radio" for="delivery_courier"><span class="checkout-form__label-title">Доставка курьером по&nbsp;Санкт&#8209;Петербургу</span><span class="checkout-form__label-info">От 1 до 2 дней. Стоимость: 350р. Доставка осуществляется курьерской службой по Санкт-Петербургу в пределах КАД по будним дням с 10:00 до 18:00.</span>
+                  </label>
+                </div>
+                <div class="checkout-form__radio-input">
+                  <input type="radio" name="delivery_type" id="delivery_pickup" value="pickup"/>
+                  <label class="checkout-form__label checkout-form__label--radio" for="delivery_pickup"><span class="checkout-form__label-title">Самовывоз</span><span class="checkout-form__label-info">Стоимость: 0р. Вы можете самостоятельно забрать заказ из нашего магазина по адресу: Санкт-Петербург, ул. Радищева, д. 17-19. Ежедневно с 11:00 до 21:00.</span>
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <h2 class="checkout-form__title">Оплата
+                </h2>
+                <div class="checkout-form__radio-input">
+                  <input type="radio" name="payment_type" id="payment-sberbank" value="sberbank" checked=""/>
+                  <label class="checkout-form__label checkout-form__label--radio" for="payment-sberbank"><span class="checkout-form__label-title">Сбербанк</span><span class="checkout-form__label-info">Вы можете оплатить заказ в любом отделении Сбербанка или в системе Сбербанк Он-Лайн. Реквизиты для оплаты Вы получите с электронным письмом, подтверждающем оформление заказа.</span>
+                  </label>
+                </div>
+                <div class="checkout-form__radio-input">
+                  <input type="radio" name="payment_type" id="payment-card" value="card"/>
+                  <label class="checkout-form__label checkout-form__label--radio" for="payment-card"><span class="checkout-form__label-title">Банковской картой он-лайн</span><span class="checkout-form__label-info">Оплата банковской картой Visa, MasterCard (в том числе Visa Electron и Maestro) в режиме он-лайн.</span>
+                  </label>
+                </div>
+                <div class="checkout-form__radio-input">
+                  <input type="radio" name="payment_type" id="payment-cash" value="cash"/>
+                  <label class="checkout-form__label checkout-form__label--radio" for="payment-cash"><span class="checkout-form__label-title">Наличными курьеру</span><span class="checkout-form__label-info">Оплатить заказ нужно будет наличными деньгами курьеру при получении.</span>
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-form__block">
+                <h2 class="checkout-form__title">Данные заказчика
+                </h2>
+                <div class="checkout-form__checkbox-input">
+                  <input type="checkbox" name="one-person" id="checkbox-one-person" checked=""/>
+                  <label class="checkout-form__label checkout-form__label--checkbox" for="checkbox-one-person"><span class="checkout-form__label-title">Заказчик&nbsp;и&nbsp;получатель одно&nbsp;и&nbsp;тоже&nbsp;лицо</span><span class="checkout-form__label-info">Снимите галочку, если получать заказ будет кто-то другой.</span>
+                  </label>
+                </div>
+                <div class="checkout-form__inputs">
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_firstname" placeholder="Имя"/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_surname" placeholder="Фамилия"/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="email" name="user_email" placeholder="E-mail"/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_phone" placeholder="Телефон"/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_country" placeholder="Россия *" disabled=""/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_city" placeholder="Санкт-Петербург *" disabled=""/>
+                  </div>
+                  <div class="checkout-form__input-info">* Страна и город определены автоматически. <a href='#city-select'>Именить страну или город</a>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_street" placeholder="Улица"/>
+                  </div>
+                  <div class="checkout-form__text-input checkout-form__text-input--short">
+                    <input type="text" name="user_house" placeholder="Дом"/>
+                  </div>
+                  <div class="checkout-form__text-input checkout-form__text-input--short">
+                    <input type="text" name="user_building" placeholder="Корпус"/>
+                  </div>
+                  <div class="checkout-form__text-input checkout-form__text-input--short">
+                    <input type="text" name="user_appartment" placeholder="Квартира/офис"/>
+                  </div>
+                  <div class="checkout-form__text-input checkout-form__text-input--short">
+                    <input type="text" name="user_floor" placeholder="Этаж"/>
+                  </div>
+                  <div class="checkout-form__text-input">
+                    <input type="text" name="user_index" placeholder="Индекс"/>
+                  </div>
+                  <div class="checkout-form__textarea-input">
+                    <textarea name="user_comment" placeholder="Комментарии к заказу..."></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-form__submit">
+                <button class="checkout-form__submit-button" type="submit">Оформить заказ
+                </button>
+                <p class="checkout-form__legal">Нажимая на кнопку «Оформить заказ», вы даете согласие на обработку персональных данных и соглашаетесь c <a href='#'>политикой конфиденциальности.</a>
+                </p>
+              </div>
+            </form><!--/ checkout-form --> 
+          </main>
+          <aside class="checkout__aside"><!-- order-preview --> 
+            <section class="order-preview"> 
+              <h2 class="order-preview__heading">Ваш заказ
+              </h2>
+              <ul class="order-preview__products">
+                <li class="order-preview__product">
+                  <div class="order-preview__image"><img src="images/cart/product1.jpg" alt=""/>
+                  </div>
+                  <div class="order-preview__content">
+                    <div class="order-preview__name">marla mini
+                    </div>
+                    <div class="order-preview__price">6900 руб.
+                    </div>
+                    <div class="order-preview__number">Количество: 2 шт.
+                    </div>
+                  </div>
+                </li>
+                <li class="order-preview__product">
+                  <div class="order-preview__image"><img src="images/cart/product2.jpg" alt=""/>
+                  </div>
+                  <div class="order-preview__content">
+                    <div class="order-preview__name">marla mini
+                    </div>
+                    <div class="order-preview__price">6900 руб.
+                    </div>
+                    <div class="order-preview__number">Количество: 2 шт.
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="order-preview__result">
+                <div class="order-preview__result-row">
+                  <div class="order-preview__result-title">Подытог
+                  </div>
+                  <div class="order-preview__result-sum">19200 руб.
+                  </div>
+                </div>
+                <div class="order-preview__result-row">
+                  <div class="order-preview__result-title">Доставка
+                  </div>
+                  <div class="order-preview__result-sum">350 руб.
+                  </div>
+                </div>
+                <div class="order-preview__result-row">
+                  <div class="order-preview__result-title">Итого
+                  </div>
+                  <div class="order-preview__result-sum">19550 руб.
+                  </div>
+                </div>
+              </div>
+            </section><!--/ order-preview --> 
+          </aside>
         </div>
       </div>
-    </section><!--/ top-screen --> <!-- menu-cards --> 
-    <section class="menu-cards"><a class="menu-cards__card menu-cards__card--heigh" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card1.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card1_s.jpg" alt="Женские сумки"/>
-      </picture></span><span class="menu-cards__content"><span class="menu-cards__title">Женские сумки</span><span class="menu-cards__subtitle">Новая коллекция</span></span></a><a class="menu-cards__card" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card2.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card2_s.jpg" alt="Женская обувь"/>
-      </picture></span><span class="menu-cards__content"><span class="menu-cards__title">Женская обувь</span><span class="menu-cards__subtitle">Новая коллекция</span></span></a><a class="menu-cards__card" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card3.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card3_s.jpg" alt="Аксессуары"/>
-      </picture></span><span class="menu-cards__content"><span class="menu-cards__title">Аксессуары</span><span class="menu-cards__subtitle">Стиль в мелочах</span></span></a><a class="menu-cards__card menu-cards__card--heigh menu-cards__card--shift" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card4.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card4_s.jpg" alt="Мужские сумки"/>
-      </picture></span><span class="menu-cards__content menu-cards__content--bottom"><span class="menu-cards__title">Мужские сумки</span><span class="menu-cards__subtitle">Новая коллекция</span></span></a><a class="menu-cards__card menu-cards__card--full" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card5.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card5_s.jpg" alt="Рюкзаки"/>
-      </picture></span><span class="menu-cards__content"><span class="menu-cards__title">Рюкзаки</span><span class="menu-cards__subtitle">Удобно и стильно</span></span></a><a class="menu-cards__card" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card6.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card6_s.jpg" alt="Косметика для ухода"/>
-      </picture></span><span class="menu-cards__content menu-cards__content--bottom"><span class="menu-cards__title">Косметика для&nbsp;ухода</span><span class="menu-cards__subtitle">Всегда с иголочки</span></span></a><a class="menu-cards__card" href="/catalog"><span class="menu-cards__image">
-      <picture>
-        <source srcset="images/menu-cards/menu-card7.jpg" media="(min-width: 769px)"/><img src="images/menu-cards/menu-card7_s.jpg" alt="Подарочная карта"/>
-      </picture></span><span class="menu-cards__content menu-cards__content--bottom"><span class="menu-cards__title">Подарочная карта</span><span class="menu-cards__subtitle">Порадуйте близких</span></span></a>
-    </section><!--/ menu-cards --> <!-- instagram-preview --> 
-    <section class="instagram-preview">
-      <header class="instagram-preview__header"><a class="instagram-preview__link" href="https://www.instagram.com/twota/?hl=ru">@two-ta</a>
-        <h2 class="instagram-preview__title">Подписывайтесь<br> на наш Instagram
-        </h2>
-      </header>
-      <div class="instagram-preview__list"><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide1.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide2.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">84433<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide3.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">21311<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide4.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">55343<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide5.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide6.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">60062<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide7.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">888<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide8.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">1323<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide9.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">2377<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a><a class="instagram-preview__item" href="https://www.instagram.com/twota/?hl=ru" style="background-image: url(images/instagram-preview/slide10.jpg)"><span class="instagram-preview__likes"><span class="instagram-preview__likes-value">12900<span class="icon">
-          <svg>
-            <use xlink:href="./images/html-sprite.svg#like"></use>
-          </svg></span></span></span></a>
-      </div>
-    </section><!--/ instagram-preview --> <!-- main-footer --> 
+    </section><!--/ checkout --> <!-- main-footer --> 
     <footer class="main-footer">
       <div class="main-footer__inner">
         <div class="main-footer__row">
@@ -638,7 +753,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?9b5faa208f"></script>
-    <script src="js/main.js?e5a68c4766"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,118 @@
+.order-preview {
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px;
+
+    border: 2px solid #ebebeb;
+
+    font-family: $opsans;
+    color: $text-color-d;
+
+    transition: transform 300ms ease;
+}
+
+.order-preview__heading {
+    margin: 0 0 30px;
+
+    font-family: $sansation;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1;
+}
+
+.order-preview__products {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.order-preview__product {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: -1px;
+
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.order-preview__image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+.order-preview__content {
+    flex: 1 1 auto;
+}
+
+.order-preview__name {
+    margin-top: -5px;
+    margin-bottom: 25px;
+
+    font-family: $sansation;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+}
+
+.order-preview__price {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.order-preview__number {
+    color: #a6a6a6;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.order-preview__result {
+    padding-top: 30px;
+}
+
+.order-preview__result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.order-preview__result-title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.order-preview__result-sum {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .order-preview {
+        position: relative;
+    }
+
+    .order-preview__heading {
+        margin-bottom: 20px;
+        
+        font-size: 20px;
+    }
+}

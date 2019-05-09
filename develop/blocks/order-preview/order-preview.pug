@@ -1,0 +1,28 @@
+mixin order-preview()
+    +b.SECTION.order-preview 
+        +e.H2.heading Ваш заказ
+        +e.UL.products
+            +e.LI.product
+                +e.image
+                    img(src='images/cart/product1.jpg', alt="")
+                +e.content
+                    +e.name marla mini
+                    +e.price 6900 руб.
+                    +e.number Количество: 2 шт.
+            +e.LI.product
+                +e.image
+                    img(src='images/cart/product2.jpg', alt="")
+                +e.content
+                    +e.name marla mini
+                    +e.price 6900 руб.
+                    +e.number Количество: 2 шт.
+        +e.result
+            +e.result-row
+                +e.result-title Подытог
+                +e.result-sum 19200 руб.
+            +e.result-row
+                +e.result-title Доставка
+                +e.result-sum 350 руб.
+            +e.result-row
+                +e.result-title Итого
+                +e.result-sum 19550 руб.

@@ -1,0 +1,30 @@
+mixin cart()
+    +b.cart
+        +inner
+            +e.wrapper
+                +e.MAIN.content
+                    +e.H1.title Ваш заказ
+                    +e.UL.list
+                        +e.LI.product
+                            +cart-product('Marla mini', 'images/cart/product1.jpg', 'Женские сумки', 'marla-mini-mint', 6900, 2)
+                        +e.LI.product
+                            +cart-product('Stanford Jr.', 'images/cart/product2.jpg', 'Рюкзаки', 'stanford-khaki-jr', 5400, 1)
+                    +e.result
+                        +e.result-label Итого
+                        +e.result-sum
+                            span.value
+                            | 
+                            | руб.
+                    +e.FORM.discount(action='#' method='post')
+                        +e.A.discount-info(href='#') ?
+                        +e.INPUT.discount-input(type='text' name='discount' placeholder='Код вашей карты')
+                        +e.BUTTON.discount-apply(type='submit') Применить
+                    +e.actions
+                        +e.A.action.__reset Очистить корзину
+                        +e.A.action.__order Оформить заказ
+                +e.ASIDE.aside
+                    +e.authorization
+                        +e.authorization-status Вы не авторизованы.
+                        +e.A.authorization-link(href="#authorizationModal" data-target="#authorizationModal" data-toggle="modal") Авторизоваться
+                    +e.P.note
+                        | Друзья, обращаем Ваше внимание, что некоторых изделий, представленных в каталоге, может не оказаться в наличии — это означает, что после оформления заказа нам может потребоваться до 10 рабочих дней для производства и отправки изделий. Если для Вас критически Важен срок получения заказа, то Вы можете уточнить его связавшись с нами по телефону или e-mail, указанным в разделе <a href='contacts-page.html'>Контакты.</a>

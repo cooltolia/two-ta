@@ -1,0 +1,75 @@
+mixin checkout-form()
+    +b.FORM.checkout-form(method='post' action='#')
+        +e.block
+            +e.H2.title Ваш город для доставки
+            +e.P.text Мы постарались определить город автоматически! Если он указан неверно, то выберите Ваш город из списка. Если Вашего города нет в списке, то укажите любой ближайший, а название Вашего напишите в поле "Комментарий к заказу".
+            +e.sity-select
+                +city-select
+        +e.block
+            +e.H2.title Вариант доставки
+            +e.radio-input
+                input(type='radio' name='delivery_type' id='delivery_courier' value='courier' checked='')
+                +e.LABEL.label.--radio(for='delivery_courier')
+                    +e.SPAN.label-title Доставка курьером по&nbsp;Санкт&#8209;Петербургу
+                    +e.SPAN.label-info От 1 до 2 дней. Стоимость: 350р. Доставка осуществляется курьерской службой по Санкт-Петербургу в пределах КАД по будним дням с 10:00 до 18:00.
+            +e.radio-input
+                input(type='radio' name='delivery_type' id='delivery_pickup' value='pickup')
+                +e.LABEL.label.--radio(for='delivery_pickup')
+                    +e.SPAN.label-title Самовывоз
+                    +e.SPAN.label-info Стоимость: 0р. Вы можете самостоятельно забрать заказ из нашего магазина по адресу: Санкт-Петербург, ул. Радищева, д. 17-19. Ежедневно с 11:00 до 21:00.
+        +e.block
+            +e.H2.title Оплата
+            +e.radio-input
+                input(type='radio' name='payment_type' id='payment-sberbank' value='sberbank' checked='')
+                +e.LABEL.label.--radio(for='payment-sberbank')
+                    +e.SPAN.label-title Сбербанк
+                    +e.SPAN.label-info Вы можете оплатить заказ в любом отделении Сбербанка или в системе Сбербанк Он-Лайн. Реквизиты для оплаты Вы получите с электронным письмом, подтверждающем оформление заказа.
+            +e.radio-input
+                input(type='radio' name='payment_type' id='payment-card' value='card')
+                +e.LABEL.label.--radio(for='payment-card')
+                    +e.SPAN.label-title Банковской картой он-лайн
+                    +e.SPAN.label-info Оплата банковской картой Visa, MasterCard (в том числе Visa Electron и Maestro) в режиме он-лайн.
+            +e.radio-input
+                input(type='radio' name='payment_type' id='payment-cash' value='cash')
+                +e.LABEL.label.--radio(for='payment-cash')
+                    +e.SPAN.label-title Наличными курьеру
+                    +e.SPAN.label-info Оплатить заказ нужно будет наличными деньгами курьеру при получении.
+        +e.block
+            +e.H2.title Данные заказчика
+            +e.checkbox-input
+                input(type='checkbox' name='one-person' id='checkbox-one-person' checked='')
+                +e.LABEL.label.--checkbox(for='checkbox-one-person')
+                    +e.SPAN.label-title Заказчик&nbsp;и&nbsp;получатель одно&nbsp;и&nbsp;тоже&nbsp;лицо
+                    +e.SPAN.label-info Снимите галочку, если получать заказ будет кто-то другой.
+            +e.inputs
+                +e.text-input
+                    input(type='text' name='user_firstname' placeholder='Имя')
+                +e.text-input
+                    input(type='text' name='user_surname' placeholder='Фамилия')
+                +e.text-input
+                    input(type='email' name='user_email' placeholder='E-mail')
+                +e.text-input
+                    input(type='text' name='user_phone' placeholder='Телефон')
+                +e.text-input
+                    input(type='text' name='user_country' placeholder='Россия *' disabled='')
+                +e.text-input
+                    input(type='text' name='user_city' placeholder='Санкт-Петербург *' disabled='')
+                +e.input-info * Страна и город определены автоматически. <a href='#city-select'>Именить страну или город</a>
+                +e.text-input
+                    input(type='text' name='user_street' placeholder='Улица')
+                +e.text-input.--short
+                    input(type='text' name='user_house' placeholder='Дом')
+                +e.text-input.--short
+                    input(type='text' name='user_building' placeholder='Корпус')
+                +e.text-input.--short
+                    input(type='text' name='user_appartment' placeholder='Квартира/офис')
+                +e.text-input.--short
+                    input(type='text' name='user_floor' placeholder='Этаж')
+                +e.text-input
+                    input(type='text' name='user_index' placeholder='Индекс')
+                +e.textarea-input
+                    textarea(name='user_comment' placeholder='Комментарии к заказу...')
+        +e.submit
+            +e.BUTTON.submit-button(type='submit') Оформить заказ
+            +e.P.legal
+                | Нажимая на кнопку «Оформить заказ», вы даете согласие на обработку персональных данных и соглашаетесь c <a href='#'>политикой конфиденциальности.</a>

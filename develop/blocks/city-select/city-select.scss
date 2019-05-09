@@ -1,0 +1,61 @@
+.city-select {
+    .bx-ui-slst-pool {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 -10px;
+    }
+
+    .dropdown-block {
+        position: relative;
+        margin: 0 10px 20px;
+        padding: 7px 14px;
+        width: 40%;
+        flex: 1 1 auto;
+
+        border: 1px solid #cccccc;
+
+        &:last-child {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .bx-combobox-fake-as-input {
+        color: $text-color-d;
+        font-family: $opsans;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.35px;
+    }
+
+    .bx-ui-combobox-toggle {
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        right: 0;
+        top: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 9px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            border: 5px solid #000;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .city-select {
+        .dropdown-block {
+            width: 100%;
+            margin: 0 10px 15px;
+        }
+    }
+}
