@@ -152,7 +152,7 @@ $light-text: #ffffff;
     top: 0;
     left: 0;
 
-    fill: url('#svg-linear-gradient');
+    fill: currentColor;
 }
 
 @mixin img {

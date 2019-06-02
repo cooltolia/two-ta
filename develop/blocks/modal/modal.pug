@@ -68,4 +68,13 @@ mixin modal()
                     +e.H3.modal-title Товар успешно добавлен в корзину
                     +e.A.modal-link.--transparent(href='#' data-dismiss='modal') Продолжить покупки
                     +e.A.modal-link.--dark(href='#') Оформить заказ
+    #appealSubmitted.modal.fade(tabindex='-1', role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    +e.H3.modal-title Отлично, вы подписаны на обновления!
+                    +e.A.modal-link.--transparent(href='#' data-dismiss='modal') Продолжить
     

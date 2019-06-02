@@ -39,7 +39,22 @@
 }
 
 .main-header__phone {
-    display: none;
+    .text {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        position: relative;
+        width: 15px;
+        height: 15px;
+
+        svg {
+            @include svg-icon;
+
+            fill: $text-color;
+        }
+    }
 }
 
 .main-header__login {
@@ -317,6 +332,14 @@
         &:focus {
             text-decoration: none;
             color: $themecolor;
+        }
+
+        .text {
+            display: block; 
+        }
+
+        .icon {
+            display: none;
         }
     }
 

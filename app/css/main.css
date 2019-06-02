@@ -615,7 +615,7 @@ th {
     height: 100%;
     top: 0;
     left: 0;
-    fill: url("#svg-linear-gradient");
+    fill: currentColor;
     fill: currentColor;
     -webkit-transition: fill 300ms ease;
     -moz-transition: fill 300ms ease;
@@ -711,7 +711,7 @@ th {
     height: 100%;
     top: 0;
     left: 0;
-    fill: url("#svg-linear-gradient");
+    fill: currentColor;
     fill: currentColor;
     -webkit-transition: fill 300ms ease;
     -moz-transition: fill 300ms ease;
@@ -1000,7 +1000,7 @@ th {
     height: 100%;
     top: 0;
     left: 0;
-    fill: url("#svg-linear-gradient");
+    fill: currentColor;
     fill: currentColor;
     -webkit-transition: fill 300ms ease;
     -moz-transition: fill 300ms ease;
@@ -2785,7 +2785,7 @@ th {
       height: 100%;
       top: 0;
       left: 0;
-      fill: url("#svg-linear-gradient");
+      fill: currentColor;
       fill: #fff; }
 
 @media (min-width: 769px) {
@@ -2919,7 +2919,7 @@ th {
 
 @media (min-width: 769px) {
   .main-footer__row:first-child {
-    padding: 0 30px;
+    padding: 0 30px 20px;
     max-width: 936px;
     margin: 0 auto;
     display: -webkit-box;
@@ -3015,8 +3015,22 @@ th {
       -ms-transform: translateX(-120%);
           transform: translateX(-120%); }
 
-.main-header__phone {
+.main-header__phone .text {
   display: none; }
+
+.main-header__phone .icon {
+  display: block;
+  position: relative;
+  width: 15px;
+  height: 15px; }
+  .main-header__phone .icon svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    fill: currentColor;
+    fill: #1a1a1a; }
 
 .main-header__login {
   display: none; }
@@ -3090,7 +3104,7 @@ th {
     height: 100%;
     top: 0;
     left: 0;
-    fill: url("#svg-linear-gradient");
+    fill: currentColor;
     pointer-events: none;
     fill: #1a1a1a;
     -webkit-transition: fill 300ms ease;
@@ -3329,6 +3343,10 @@ th {
     .main-header__phone:hover, .main-header__phone:active, .main-header__phone:focus {
       text-decoration: none;
       color: #e9444d; }
+    .main-header__phone .text {
+      display: block; }
+    .main-header__phone .icon {
+      display: none; }
   .main-header__login {
     display: -webkit-box;
     display: -moz-box;
@@ -3365,7 +3383,7 @@ th {
         height: 100%;
         top: 0;
         left: 0;
-        fill: url("#svg-linear-gradient");
+        fill: currentColor;
         fill: #1a1a1a;
         -webkit-transition: fill 300ms ease;
         -moz-transition: fill 300ms ease;
@@ -3425,6 +3443,11 @@ th {
   .main-nav__top-menu-link:hover, .main-nav__top-menu-link:focus, .main-nav__top-menu-link:active, .main-nav__top-menu-link.current {
     color: #e9444d;
     text-decoration: none; }
+  .main-nav__top-menu-link:hover + .main-nav__second-menu, .main-nav__top-menu-link:focus + .main-nav__second-menu {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
 
 .main-nav__second-menu {
   position: absolute;
@@ -4696,7 +4719,7 @@ body.modal-open {
       height: 100%;
       top: 0;
       left: 0;
-      fill: url("#svg-linear-gradient");
+      fill: currentColor;
       fill: #1a1a1a;
       -webkit-transition: fill 300ms ease;
       -moz-transition: fill 300ms ease;
@@ -4784,7 +4807,7 @@ body.modal-open {
     height: 100%;
     top: 0;
     left: 0;
-    fill: url("#svg-linear-gradient");
+    fill: currentColor;
     fill: #000000; }
 
 .product-data__details-title {
@@ -4921,7 +4944,7 @@ body.modal-open {
       height: 100%;
       top: 0;
       left: 0;
-      fill: url("#svg-linear-gradient");
+      fill: currentColor;
       fill: #fff; }
 
 @media (min-width: 769px) {
@@ -5643,11 +5666,25 @@ body.modal-open {
       height: 100%;
       top: 0;
       left: 0;
-      fill: url("#svg-linear-gradient");
+      fill: currentColor;
       fill: #1a1a1a;
       -webkit-transition: fill 300ms ease;
       -moz-transition: fill 300ms ease;
       transition: fill 300ms ease; }
+
+@media (min-width: 480px) {
+  .side-menu__close {
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 44%;
+            flex: 1 1 44%; }
+  .side-menu__close-icon {
+    left: 10%; }
+  .side-menu__navigation {
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 46%;
+            flex: 1 1 46%; } }
 
 .socials {
   width: 100%;
@@ -5766,7 +5803,13 @@ body.modal-open {
         font-size: 16px; } }
 
 .terms-sidebar {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  position: relative;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  -moz-transition: transform 300ms ease, -moz-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease, -moz-transform 300ms ease; }
 
 .terms-sidebar__menu {
   margin: 0;
@@ -5855,25 +5898,16 @@ body.modal-open {
 
 @media (min-width: 769px) {
   .terms__sidebar {
+    position: absolute;
     width: auto;
     max-width: 230px;
-    left: 10%;
-    top: 145px;
+    left: 0;
+    top: 65px;
     padding: 0;
     border: none; }
   .terms__content {
     padding-top: 0;
     padding-left: 40%; } }
-
-@media (min-width: 1200px) {
-  .terms__sidebar {
-    left: 15%; }
-  .terms__content {
-    padding-left: 35%; } }
-
-@media (min-width: 1500px) {
-  .terms__sidebar {
-    left: 20%; } }
 
 .title {
   position: relative;

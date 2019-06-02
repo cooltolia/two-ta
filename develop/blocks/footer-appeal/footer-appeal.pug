@@ -2,7 +2,7 @@ mixin footer-appeal()
     +b.footer-appeal
         +e.title Подпишитесь на рассылку и будьте в курсе всех новинок и скидок Two-Ta
         +e.FORM.form(method='post' action='#')
-            +e.INPUT.input(type="email", name="email" placeholder='Ваш E-mail')
+            +e.INPUT.input(type="email" name="email" placeholder='Ваш E-mail' required='')
             +e.BUTTON.submit Подписаться
             +e.legal
                 | Нажимая на кнопку «Подписаться», вы даете согласие на обработку персональных данных и соглашаетесь c <a href='/policy'>политикой конфиденциальности</a>.

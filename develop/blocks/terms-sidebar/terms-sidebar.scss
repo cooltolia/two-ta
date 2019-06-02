@@ -1,5 +1,8 @@
 .terms-sidebar {
+    position: relative;
     font-family: $opsans;
+
+    transition: transform 300ms ease;
 }
 
 .terms-sidebar__menu {
@@ -56,4 +59,3 @@
         justify-content: flex-start;
     }
 }
-

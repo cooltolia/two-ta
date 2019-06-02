@@ -51,7 +51,7 @@
     &:hover,
     &:focus {
         + .main-nav__second-menu {
-                                                      
+            transform: translateY(0)                                        
         }
     }
 }

@@ -296,3 +296,17 @@
         }
     }
 }
+
+@media (min-width: 480px) {
+    .side-menu__close {
+        flex: 1 1 44%;
+    }
+
+    .side-menu__close-icon {
+        left: 10%;
+    }
+
+    .side-menu__navigation {
+        flex: 1 1 46%;
+    }
+}
