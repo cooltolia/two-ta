@@ -3331,20 +3331,20 @@ th {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 25px;
-    color: #1a1a1a;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.7px;
-    text-decoration: none;
-    -webkit-transition: color 300ms ease;
-    -moz-transition: color 300ms ease;
-    transition: color 300ms ease; }
-    .main-header__phone:hover, .main-header__phone:active, .main-header__phone:focus {
-      text-decoration: none;
-      color: #e9444d; }
+    margin-right: 25px; }
     .main-header__phone .text {
-      display: block; }
+      display: block;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+      -webkit-transition: color 300ms ease;
+      -moz-transition: color 300ms ease;
+      transition: color 300ms ease; }
+      .main-header__phone .text:hover, .main-header__phone .text:active, .main-header__phone .text:focus {
+        text-decoration: none;
+        color: #e9444d; }
     .main-header__phone .icon {
       display: none; }
   .main-header__login {

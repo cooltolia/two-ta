@@ -7,9 +7,9 @@ mixin main-header
                 picture
                     source(srcset="images/logo.svg" media="(min-width: 769px)")
                     img(src="images/logo_m.svg" alt="TWO-TA логотип")
-            +e.A.phone(href='#callbackModal' data-target='#callbackModal' data-toggle='modal') 
-                span.text +7 (812) 748-24-46
-                span.icon
+            +e.phone
+                a.text(href='#callbackModal' data-target='#callbackModal' data-toggle='modal') +7 (812) 748-24-46
+                a.icon(href='tel:+78127482446')
                     +icon('phone')
             +e.A.login(href='#authorizationModal' data-target='#authorizationModal' data-toggle='modal') 
                 span.icon
