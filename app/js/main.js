@@ -518,7 +518,19 @@ jQuery(document).ready(function($) {
 
                 {
 
-                    breakpoint: 768,
+                    breakpoint: 480,
+
+                    settings: {
+
+                        slidesToShow: 2,
+
+                    }
+
+                },
+
+                {
+
+                    breakpoint: 900,
 
                     settings: 'unslick'
 
@@ -737,7 +749,7 @@ jQuery(document).ready(function($) {
 
     
 
-            if (scrollTop >= 200) {
+            if (scrollTop >= 100) {
 
                 header.addClass('minimized');
 
@@ -842,7 +854,7 @@ jQuery(document).ready(function($) {
 
     
 
-        if (window.matchMedia('(min-width: 769px)').matches) {
+        if (window.matchMedia('(min-width: 900px)').matches) {
 
     
 
@@ -1080,7 +1092,7 @@ jQuery(document).ready(function($) {
 
                 {
 
-                    breakpoint: 768,
+                    breakpoint: 900,
 
                     settings: {
 
@@ -1131,7 +1143,7 @@ jQuery(document).ready(function($) {
     
     (function() {
 
-        if (window.matchMedia('(max-width: 768px)').matches) {
+        if (window.matchMedia('(max-width: 900px)').matches) {
 
             var $hamburger = $('.hamburger');
 
@@ -1272,7 +1284,7 @@ jQuery(document).ready(function($) {
 
     
 
-        if (window.matchMedia('(min-width: 769px)').matches) {
+        if (window.matchMedia('(min-width: 900px)').matches) {
 
             $(document).on('scroll', function() {
 

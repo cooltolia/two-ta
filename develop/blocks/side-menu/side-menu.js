@@ -1,5 +1,5 @@
 (function() {
-    if (window.matchMedia('(max-width: 768px)').matches) {
+    if (window.matchMedia('(max-width: 900px)').matches) {
         var $hamburger = $('.hamburger');
         var $nav = $('.main-header__side-menu');
         var $actions = $('.side-menu__actions');

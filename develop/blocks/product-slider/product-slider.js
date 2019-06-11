@@ -15,7 +15,7 @@
         // autoplaySpeed: 3000,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 900,
                 settings: {
                     slidesPerRow: 1,
                     slidesToShow: 1,

@@ -57,7 +57,7 @@
     $(document).on('scroll', function(e) {
         var scrollTop = $(this).scrollTop();
 
-        if (scrollTop >= 200) {
+        if (scrollTop >= 100) {
             header.addClass('minimized');
             hiddenMenu.addClass('shifted');
         } else {

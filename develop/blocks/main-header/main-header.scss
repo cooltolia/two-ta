@@ -1,8 +1,8 @@
 .main-header {
     position: fixed;
     width: 100%;
+    max-width: 2000px;
     top: 0;
-    left: 0;
     z-index: 9;
     font-family: $opsans;
 
@@ -39,6 +39,10 @@
 }
 
 .main-header__phone {
+    position: relative;
+
+    transition: opacity 300ms ease;
+
     .text {
         display: none;
     }
@@ -55,6 +59,10 @@
             fill: $text-color;
         }
     }
+}
+
+.menu-opened .main-header__phone {
+    opacity: 0;
 }
 
 .main-header__login {
@@ -288,6 +296,10 @@
                 top: 65px;
             }
         }
+    }
+
+    .main-header__side-menu {
+        display: none;
     }
 
     .main-header__inner {

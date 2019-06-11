@@ -5,11 +5,11 @@ mixin product-card(data)
             +e.flipper-image
                 +e.front-image
                     picture
-                        source(srcset=data.front_image media="(min-width: 769px)")
+                        source(srcset=data.front_image media="(min-width: 900px)")
                         img(src=data.front_image_s alt=data.name)
                 +e.back-image
                     picture
-                        source(srcset=data.back_image media="(min-width: 769px)")
+                        source(srcset=data.back_image media="(min-width: 900px)")
                         img(src=data.back_image_s alt=data.name)
         +e.row
             +e.name= data.name

@@ -8,7 +8,7 @@
     var offset_t = wrapper.offset().top - $(window).scrollTop();
     console.log(offset_t);
 
-    if (window.matchMedia('(min-width: 769px)').matches) {
+    if (window.matchMedia('(min-width: 900px)').matches) {
 
         $(document).on('scroll', function() {
             var offset_t = wrapper.offset().top - $(window).scrollTop();

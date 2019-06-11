@@ -135,7 +135,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .cart-product {
         flex-wrap: wrap;
         align-items: flex-start;
@@ -147,7 +147,7 @@
     }
 
     .cart-product__content {
-        width: 50%;
+        width: 55%;
         flex: 1 1 auto;
     }
 
@@ -159,7 +159,9 @@
 
     .cart-product__price {
         order: 1;
+        flex: 1 1 auto;
         margin-top: -15px;
+        text-align: left;
     }
 
     .cart-product__counter {
@@ -193,4 +195,8 @@
         right: 0;
         top: 20px;
     }
+}
+
+@media (min-width: 901px) {
+    
 }
