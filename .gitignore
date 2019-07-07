@@ -12,6 +12,7 @@ develop/js/main.js
 *.pdf
 *.psd
 *.sublime*
+*.zip
 css/*.css
 node_modules/
 build/

@@ -2,6 +2,22 @@ $.noConflict();
 jQuery(document).ready(function($) {
     $('body').removeClass('pageload');
 
+    window.debounce = function(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this,
+                args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
     
 
     
@@ -162,7 +178,13 @@ jQuery(document).ready(function($) {
 
         if (filter.length > 0) {
 
+            Stickyfill.add(filter);
+
+    
+
             var filterOffset = filter.offset().top;
+
+    
 
             var filterHeight = filter.outerHeight(true);
 
@@ -170,29 +192,31 @@ jQuery(document).ready(function($) {
 
             $(document).on('scroll', function(e) {
 
-                var scrollTop = $(this).scrollTop();
+                // var header = $('.main-header.minimized');
 
-                var header = $('.main-header');
+                // var headerHeight = header.outerHeight();
 
-                var headerHeight = header.outerHeight();
+                // filter.css('top', headerHeight + 'px');
 
-                
+    
 
-                if (scrollTop >= filterOffset) {
+                // if (scrollTop >= filterOffset + 20) {
 
-                    filter.addClass('fixed');
+                //     filter.addClass('fixed');
 
-                    filter.css('top', headerHeight + 'px');
+                //     headerHeight = headerHeight || 0;
 
-                    products.css('paddingTop', filterHeight + 'px');
+                //     filter.css('top', headerHeight + 'px');
 
-                } else {
+                //     products.css('paddingTop', filterHeight + 'px');
 
-                    filter.removeClass('fixed');
+                // } else {
 
-                    products.css('paddingTop', 0);
+                //     filter.removeClass('fixed');
 
-                }
+                //     products.css('paddingTop', 0);
+
+                // }
 
             });
 
@@ -256,13 +280,7 @@ jQuery(document).ready(function($) {
 
     
 
-        var orderTrigger = $('.order-select__label');
-
-        var orderDropDown = $('.order-select__drop-down');
-
-    
-
-        var orderItem = $('.order-select__item');
+        var filter = $('.catalog__filter');
 
     
 
@@ -292,75 +310,9 @@ jQuery(document).ready(function($) {
 
     
 
-        //TODO
+        catalogOverlay.on('click', function() {
 
-        // I wish I knew how to rewrite this
-
-        $(document).click(function(e) {
-
-            e.stopPropagation();
-
-    
-
-            if (
-
-                colorDropDown.has(e.target).length === 0 &&
-
-                $(e.target)[0] !== colorTrigger[0] &&
-
-                orderDropDown.has(e.target).length === 0 &&
-
-                $(e.target)[0] !== orderTrigger[0]
-
-            ) {
-
-                colorTrigger.removeClass('active');
-
-                colorDropDown.removeClass('active');
-
-    
-
-                orderTrigger.removeClass('active');
-
-                orderDropDown.removeClass('active');
-
-    
-
-                catalogOverlay.removeClass('active');
-
-            }
-
-        });
-
-    
-
-        $(document).keyup(function(e) {
-
-            if (e.keyCode === 27) {
-
-                colorTrigger.removeClass('active');
-
-                colorDropDown.removeClass('active');
-
-    
-
-                catalogOverlay.removeClass('active');
-
-    
-
-                orderTrigger.removeClass('active');
-
-                orderDropDown.removeClass('active');
-
-            }
-
-        });
-
-    
-
-        catalogOverlay.click(function() {
-
-            $(this).removeClass('active');
+            catalogOverlay.removeClass('active');
 
         });
 
@@ -380,6 +332,8 @@ jQuery(document).ready(function($) {
 
                 catalogOverlay.removeClass('active');
 
+                filter.removeClass('active');
+
             } else {
 
                 $(this).addClass('active');
@@ -390,51 +344,51 @@ jQuery(document).ready(function($) {
 
                 catalogOverlay.addClass('active');
 
-            }
-
-        });
-
-    
-
-        orderItem.on('click', function(e) {
-
-            e.preventDefault();
-
-            orderItem.removeClass('selected');
-
-            $(this).addClass('selected');
-
-    
-
-            orderTrigger.removeClass('active');
-
-            orderDropDown.removeClass('active');
-
-            catalogOverlay.removeClass('active');
-
-        });
-
-    
-
-        orderTrigger.on('click', function(e) {
-
-            if ($(this).hasClass('active')) {
-
-                $(this).removeClass('active');
-
-                orderDropDown.removeClass('active');
-
-                catalogOverlay.removeClass('active');
-
-            } else {
-
-                $(this).addClass('active');
-
-                orderDropDown.addClass('active');
-
-                catalogOverlay.addClass('active');
+                filter.addClass('active');
 
             }
+
+    
+
+            $(document).click(function(e) {
+
+                if (!$(e.target).is(colorTrigger) && colorTrigger.has(e.target).length === 0) {
+
+                    if (!$(e.target).is(colorDropDown) && colorDropDown.has(e.target).length === 0) {
+
+                        colorTrigger.removeClass('active');
+
+                        colorDropDown.removeClass('active');
+
+                    }
+
+                } else {
+
+                    return;
+
+                }
+
+            });
+
+    
+
+            $(document).keyup(function(e) {
+
+                if (e.keyCode === 27) {
+
+                    colorTrigger.removeClass('active');
+
+                    colorDropDown.removeClass('active');
+
+    
+
+                    catalogOverlay.removeClass('active');
+
+                    filter.removeClass('active');
+
+                }
+
+            });
 
         });
 
@@ -895,7 +849,133 @@ jQuery(document).ready(function($) {
     
     (function() {
 
-        
+        var orderTrigger = $('.order-select__label');
+
+        var orderDropDown = $('.order-select__drop-down');
+
+        var orderItem = $('.order-select__item');
+
+    
+
+        var filter = $('.catalog__filter');
+
+    
+
+        var catalogOverlay = $('.catalog__overlay');
+
+    
+
+        var colorTrigger = $('.color-select__label');
+
+        filter.on('click', function(e) {
+
+            if (
+
+                !$(e.target).is(orderTrigger) &&
+
+                orderDropDown.has(e.target).length === 0 &&
+
+                (!$(e.target).is(colorTrigger) && colorTrigger.has(e.target).length === 0)
+
+            ) {
+
+                catalogOverlay.trigger('click');
+
+            }
+
+        });
+
+    
+
+        orderItem.on('click', function(e) {
+
+            e.preventDefault();
+
+            orderItem.removeClass('selected');
+
+            $(this).addClass('selected');
+
+    
+
+            orderTrigger.removeClass('active');
+
+            orderDropDown.removeClass('active');
+
+            catalogOverlay.removeClass('active');
+
+            filter.removeClass('active');
+
+        });
+
+    
+
+        orderTrigger.on('click', function(e) {
+
+            if ($(this).hasClass('active')) {
+
+                $(this).removeClass('active');
+
+                orderDropDown.removeClass('active');
+
+                catalogOverlay.removeClass('active');
+
+                filter.removeClass('active');
+
+            } else {
+
+                $(this).addClass('active');
+
+                orderDropDown.addClass('active');
+
+                catalogOverlay.addClass('active');
+
+                filter.addClass('active');
+
+            }
+
+    
+
+            $(document).click(function(e) {
+
+                if (!$(e.target).is(orderTrigger) && orderTrigger.has(e.target).length === 0) {
+
+                    if (!$(e.target).is(orderDropDown) && orderDropDown.has(e.target).length === 0) {
+
+                        orderTrigger.removeClass('active');
+
+                        orderDropDown.removeClass('active');
+
+                    }
+
+                } else {
+
+                    return;
+
+                }
+
+            });
+
+    
+
+            $(document).keyup(function(e) {
+
+                if (e.keyCode === 27) {
+
+                    catalogOverlay.removeClass('active');
+
+    
+
+                    orderTrigger.removeClass('active');
+
+                    orderDropDown.removeClass('active');
+
+                    filter.removeClass('active');
+
+                }
+
+            });
+
+        });
 
     })();
 

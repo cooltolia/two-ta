@@ -51,7 +51,8 @@
     &:hover,
     &:focus {
         + .main-nav__second-menu {
-            transform: translateY(0)                                        
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 }
@@ -88,6 +89,7 @@
         min-width: 295px;
         padding: 25px 60px 25px 30px;
         left: -30px;
+        opacity: 0;
 
         .main-nav__second-menu-item {
             margin: 0;

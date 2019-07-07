@@ -82,7 +82,8 @@
     display: flex;
     align-items: center;
 
-    margin-bottom: 14px;
+    margin-bottom: 13px;
+    padding-top: 1px;
 
     &.selected {
         .color-select__preview {
@@ -107,6 +108,7 @@
 }
 
 .color-select__preview {
+    box-sizing: content-box;
     width: 20px;
     height: 20px;
     flex: 0 0 20px;
