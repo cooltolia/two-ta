@@ -3,8 +3,8 @@
     var $data = $('.product-data__accordion-data');
 
     if (window.matchMedia('(min-width: 1200px)').matches) {
-        $title.addClass('active');
-        $data.addClass('active');
+        $title.eq(0).addClass('active');
+        $data.eq(0).addClass('active');
     }
     $title.on('click', function() {
         $(this).addClass('active');

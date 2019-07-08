@@ -998,9 +998,9 @@ jQuery(document).ready(function($) {
 
         if (window.matchMedia('(min-width: 1200px)').matches) {
 
-            $title.addClass('active');
+            $title.eq(0).addClass('active');
 
-            $data.addClass('active');
+            $data.eq(0).addClass('active');
 
         }
 
