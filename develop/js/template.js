@@ -18,12 +18,23 @@ jQuery(document).ready(function($) {
         };
     };
 
-    //=require ../blocks/**/*.js
+    function mainJsLogic() {
+        //=require ../blocks/**/*.js
+        debugger;
 
-    var header = $('.main-header');
-    var headerHeight = header.outerHeight();
+        setTimeout(function() {
+            var header = $('.main-header');
+            var headerHeight = header.outerHeight();
 
-    $('body').css('paddingTop', headerHeight + 'px');
+            $('body').css('paddingTop', headerHeight + 'px');
+        }, 50);
+
+        console.log('inited');
+    }
+
+    mainJsLogic();
+
+    $(window).on('resize', mainJsLogic);
 
     // (function () {
     /*    function logElementEvent(eventName, element) {
